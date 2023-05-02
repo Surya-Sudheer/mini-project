@@ -5,10 +5,9 @@
 }
 
 .womenhomepg{
-    width:100vw;
     height: 100vh;
-    
 }
+
 .womencard{
     border-radius: 30px;
     height:400px;
@@ -23,13 +22,16 @@
     gap: 50px;
     padding: 10px;
 }
-.womencont{
 
+.womencont{
     height: 500px;;
     align-items:center;
     justify-content: space-evenly;
     display: flex;
     gap:30px;
+}
+.text{
+	height: 100vh;
 }
 
 /* trans */
@@ -116,19 +118,13 @@ body{
 	border-radius: 10px;
 }  
 
+
+
 .trans{
 padding-top: 100px;
+height: 100vh;
 }
-/* .ckcklist{
-    display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-} */
-input[type="checkbox"] {
-    /* margin-right: 10px;
-    margin-left: 50px; */
-    align-items: right;
-  }
+
 
 /* #showOne{
 
