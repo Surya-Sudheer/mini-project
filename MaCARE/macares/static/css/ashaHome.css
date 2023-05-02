@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-image:url(../images/ashaConnection.svg) ;
+    width: 100vw;
+   }
+.intro{
+    padding: 70px;
+}
+.steps{
+    padding: 0px 70px 0px 70px  ;
+}

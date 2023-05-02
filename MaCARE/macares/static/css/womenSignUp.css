@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: #bea39b;  
+    background-image: url(../images/motherBg.svg);
+    background-size:cover;
+    background-position: center;
+    padding: 60px;    
+}
+p{
+    padding-top: 10px;   
+}
+
+input{
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgb(238, 233, 227);
+    padding: 5px;
+    border: 0;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+    padding-top: 40px;
+}
+.contentWrapper{
+    /* display: flex; */
+    flex-direction: column; 
+} 
+
+img{
+    width: 100px;
+    height: 150px;
+    padding-left: 10%;
+    padding-top: 10%;   
+}
+.SignUp
+        {  
+            padding-top: 2em;
+        }
+button{
+    background: transparent; 
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 5px solid rgb(128, 214, 220);
+    width: 30%;
+    
+}
+
+button:hover{
+    /* color: white; */
+    background-color:rgb(128, 214, 220);
+}
