@@ -9,15 +9,12 @@ h1{
 }
 body{
     background-color: #bea39b;  
-    /* background-color: rgb(164, 201, 211); */
-
     background-size:cover;
     background-position: center;
-    padding: 50px;    
-    /* padding-top: 60px; */
-    
+    padding: 50px;        
     opacity:1;
 }
+
 p{
     padding-top: 20px;   
 }
@@ -68,7 +65,7 @@ input{
   width: 200px;
   
   /* right: 22%; */
-  top: 20%;
+  top: 10%;
   bottom: 9.84%;
 }
 

@@ -5,6 +5,9 @@
 	scroll-behavior: smooth;
 }
 
+body{
+    padding: 0 10%;
+}
 .womenhomepg{
     height: 100vh;
 }

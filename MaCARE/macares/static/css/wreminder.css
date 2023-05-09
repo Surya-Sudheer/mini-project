@@ -1,3 +1,12 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 0 10%;
+}
 .reminderWrapper{
     background-color:#CFB5A7; 
     width:70%; 
@@ -5,6 +14,7 @@
     flex-direction: row;
     height:10%; 
     gap: 30px;
+    padding: 10px;
     border-radius: 20px;
     padding-left: 10px ;
     box-shadow: 2px 2px;

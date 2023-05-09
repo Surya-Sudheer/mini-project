@@ -22,6 +22,8 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    padding: 0 10%;
+   
     
 }
 
@@ -98,9 +100,10 @@ body {
 .signUp{
     height: 100vh;
     padding-top: 70px;
-    padding-bottom: 70px;
+    /* padding-bottom: 70px; */
 }
 .signupcont{
+    /* image */
     display:flex;
     align-items:center;
     justify-content:center;
