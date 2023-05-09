@@ -2,11 +2,48 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+	scroll-behavior: smooth;
 }
 
 .womenhomepg{
     height: 100vh;
 }
+a {
+    text-decoration: none;
+}
+
+.weekTopButtonDiv{
+	display: flex;
+	justify-content: center;
+}
+.weekTopButton{
+	--c:  #229091; /* the color*/
+	padding:10px 15px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+
+	box-shadow: 0 0 0 .1em inset var(--c); 
+	--_g: linear-gradient(var(--c) 0 0) no-repeat;
+	background: 
+	  var(--_g) calc(var(--_p,0%) - 100%) 0%,
+	  var(--_g) calc(200% - var(--_p,0%)) 0%,
+	  var(--_g) calc(var(--_p,0%) - 100%) 100%,
+	  var(--_g) calc(200% - var(--_p,0%)) 100%;
+	background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+	outline-offset: .1em;
+	transition: background-size .4s, background-position 0s .4s;
+  }
+  button:hover {
+	--_p: 100%;
+	transition: background-position .4s, background-size 0s;
+  }
+  button:active {
+	box-shadow: 0 0 9e9q inset #0009; 
+	background-color: var(--c);
+	color: #fff;
+  }
+
 
 .womencard{
     border-radius: 30px;
@@ -54,7 +91,7 @@ body{
 	list-style-type: none;
 	display: flex;
 	align-items: center;
-	background-color: rgb(139, 158, 158);
+	background-color: rgb(171, 237, 237);
 	border-radius: 15px;
 	gap:20px;
 	width:100%;
@@ -80,7 +117,7 @@ body{
 }
 
 .current {
-	border: 3px solid green;
+	border: 3px solid rgb(14, 180, 14);
 	border-radius: 5px;
 	background-color: bisque;
 	height: 40px;
@@ -101,7 +138,7 @@ body{
 }
 
 .weeks::-webkit-scrollbar-thumb {
-	background-color: rgb(146, 22, 22);
+	background-color: rgb(214, 76, 150);
 	outline: 1px solid #ffffff;
 	cursor: pointer;
 	background-clip: padding-box;
@@ -111,21 +148,42 @@ body{
 	cursor: pointer;
 }
 
-.myDiv{
-	display:none;
-	padding:10px;
-	background-color: gray;
-	border-radius: 10px;
-}  
-
-
-
 .trans{
-padding-top: 100px;
+padding-top: 20px;
 height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+gap: 10%;
+}
+.update{
+	padding: 5px 10px;
+	border-radius: 10px;
+	float: right;
 }
 
 
+.myDiv{
+	display:none;
+	padding:20px;
+	background-color: rgb(243, 224, 224);
+	border-radius: 10px;
+	width: 70%;
+	
+} 
+.insidemyDiv{
+	display: flex; 
+	gap: 20%;
+}
+.instruction{
+	width: 70%;
+	padding-bottom: 2%;
+}
+.caluWeek{
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: center;
+}
 /* #showOne{
 
 }

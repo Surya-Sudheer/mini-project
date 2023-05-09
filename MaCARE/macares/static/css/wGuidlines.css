@@ -18,3 +18,80 @@ body{
 .trimDetails{
     height: 100vh;
 }
+.trans{
+    height: 100vh;
+}
+.card-gallery {
+    height: 70vh;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 60px;
+    padding: 10;
+  }
+
+  .card-gallery ::-webkit-scrollbar{
+    width: 0;
+  }
+ .frontImg{
+  width: 110px;
+  height: 90px; 
+ }
+  .card {
+    position: relative;
+    min-width: 200px;
+    height: 300px;
+    margin: 10px;
+    perspective: 1000px; /* Set perspective for 3D effect */
+ 
+  }
+ 
+  .card-front{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+ 
+    width: 200px;
+    height: 100px;
+    backface-visibility: hidden; /* Hide backface of card */
+    background-color:lavender;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+ 
+  }
+ 
+  .card-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    overflow: hidden;
+ 
+    width: 200px;
+    height: 400px;
+    border-radius: 10px;
+    backface-visibility: hidden; /* Hide backface of card */
+    background-color:lightcyan
+}
+ 
+  .card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease-out;
+ 
+  }
+ 
+  .card-back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    transition: transform 0.5s ease-out;
+  }
+ 
+  .card:hover .card-front {
+    transform: rotateY(-180deg);
+  }
+ 
+  .card:hover .card-back {
+    transform: rotateY(0deg);
+  }
