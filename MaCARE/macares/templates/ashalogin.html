@@ -11,20 +11,21 @@
 
 <body>
     <h1>Log In</h1>
-    <form action="">
+    <form action="{% url 'ashalogin' %}" method="post">
+        {% csrf_token %}
         <div class="content">
             <img src="../static/images/brown big log.svg">
             <div class="contentWrapper">
 
                 <p>Email id</p>
-                <input type="email" placeholder="email id">
+                <input type="email" name="email" placeholder="email id">
 
                 <p>Password</p>
-                <input type="password" placeholder="******">
+                <input type="password" name="password" placeholder="******">
 
                 <div class="logIn">
                     <a>
-                        <button>Log In</button>
+                        <button type="submit">Log In</button>
                     </a>
                 </div>
 
