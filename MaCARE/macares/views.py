@@ -20,7 +20,7 @@ def womenSignUp(request):
 
         if(password == re_password):
             print(occupation)
-            user = User(name=name,email=email,password=password,occupation=occupation,age=age,cpm=cmp,phone=phone,wardno=wardno,district=district)
+            user = User(name=name,email=email,password=password,occupation=occupation,age=age,cmp=cmp,phone=phone,wardno=wardno,district=district)
             user.save()
             email = [email]
             request.session['uname'] = name
@@ -36,10 +36,52 @@ def whome(request):
 
 
 def ashaSignUp(request):
-    return render(request,'ashaSignUp.html')
+    if request.method == 'POST':
+        name = request.POST.get('uname')
+        email = request.POST.get('email')
+        occupation = 'ahaworker'
+        password = request.POST.get('password')
+        re_password = request.POST.get('repassword')
+        district = request.POST.get('district')
+        wardno = request.POST.get('wardno')
+        phone = request.POST.get('phone')
+        cmp = request.POST.get('cmp')
+        ashaid = request.POST.get('ashaid')
+
+        if(password == re_password):
+            print(occupation)
+            user = User(name=name,email=email,password=password,occupation=occupation,cmp=cmp,phone=phone,wardno=wardno,district=district,ashaid=ashaid)
+            user.save()
+            email = [email]
+            request.session['uname'] = name
+            request.session['email'] = email
+            request.session['occupation'] = occupation
+            return ashahome(request)
+    else:
+        return render(request, 'ashaSignUp.html')
 
 def ashalogin(request):
-    return render(request,'ashalogin.html')
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+
+        user = User.objects.get(email=email)
+        print(user.occupation)
+        occupation = user.occupation
+        if user.password == password:
+            request.session['email'] = email
+            if occupation=='women':
+                return whome(request)
+            elif occupation=='ahaworker':
+                return ashahome(request)
+        else:
+            data = {'status':"Incorrect Password!!!"}
+            return render(request,'ashalogin.html',context=data)
+    else:
+        return render(request, 'ashalogin.html')
+    
+def ashahome(request):
+    return render(request,'ashahome.html')
 
 
 
