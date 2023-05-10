@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>women home page</title>
-    <link rel="stylesheet" href="../static/css/whome.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-
-    <body>
-
+{% extends 'baseWomen.html' %}
+{% block style %}
+<link rel="stylesheet" href="../static/css/whome.css" />
+{% endblock %}
+{% block content %}
+<div>
         <a href="./wprofile.html">profile</a>
         <a href="./wGuideline.html">guidlines</a>
         <a href="./wremainder.html">remainder</a>
@@ -247,21 +239,22 @@
         </div>
 
 
-        <script>
-            $(document).ready(function(){
-                $('input[type="radio"]').click(function(){
-                    var demovalue = $(this).val(); 
-                    $("div.myDiv").hide();
-                    $("#show"+demovalue).show();
-                });
-            });
-    
-            $('input[type="radio"]').on('change', function() {
-                $('input[type="radio"]').closest('li.current').removeClass('current');
-                $(this).closest('li').addClass('current');
-            });
-        </script>
+      
+</div>
+{% endblock %}
+{% block script %}
+<script>
+    $(document).ready(function () {
+        $('input[type="radio"]').click(function () {
+            var demovalue = $(this).val();
+            $("div.myDiv").hide();
+            $("#show" + demovalue).show();
+        });
+    });
 
-        
-    </body>
-</html>
+    $('input[type="radio"]').on('change', function () {
+        $('input[type="radio"]').closest('li.current').removeClass('current');
+        $(this).closest('li').addClass('current');
+    });
+</script>
+{% endblock %}
