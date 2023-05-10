@@ -1,35 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>asha home</title>
-    <link rel="stylesheet" href="../static/css/ashaHome.css">
-</head>
-<body>
-
-    <a href="./ashaprofile.html">profile</a>
-    <a href="./ashaWomenInWard.html">womeninyourWard</a>
-    <a href="./ashaguidlinesView.html">guidlinesView</a>
-    <a href="./ashaChat.html">chat</a>
-
-
+{% extends 'baseAsha.html' %}
+{% block style %}<link rel="stylesheet" href="../static/css/ashaHome.css"> {% endblock %}
+{% block content %}
+<div>
     <h1 style="padding-left:50px;padding-top:50px"> ASHA Worker Home Page </h1>
     <p class="intro">
-        Accredited Social Health Activist, or ASHA, worker is female healthcare activist trained to facilitate the work of the nationwide public health system within their community. ASHA
-        workers are a core part of the National Rural Health Mission launched by the Government 
+        Accredited Social Health Activist, or ASHA, worker is female healthcare activist trained to facilitate the work
+        of the nationwide public health system within their community. ASHA
+        workers are a core part of the National Rural Health Mission launched by the Government
         of India. ASHA workers are trained to act as a care provider at the community level and
         facilitate access to healthcare, medicine and sanitation services. ASHA workers also work
         to raise the level of awareness of health issues among the marginalised sections within the community.
     </p>
-    <p class="steps"> 
-        <strong> Steps of the Website  </strong> <br> <br>
+    <p class="steps">
+        <strong> Steps of the Website </strong> <br> <br>
         Step 1: Set up the Profile Page. <br> <br>
         Step 2: You can view pregnant women in your ward through Your Ward Section. <br> <br>
         Step 3: Each women updated details can be viewed through Your Ward Section linking to each name. <br><br>
         Step 4: Doubts and instructions can be clarified through Chat Section with each Woman. <br>
 
     </p>
-</body>
-</html>
+</div>
+{% endblock %}

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>women base</title>
+    {% block style %} {% endblock %}
     <link rel="stylesheet" href="../static/css/base.css">
 </head>
 
@@ -35,7 +36,8 @@
     </div>
 
     <div class="content">
-
+{% block content %}
+{% endblock %}
     </div>
     <div class= "bottom">
         <div class="bottomcontainer" >
@@ -48,6 +50,8 @@
 
         </div>
     </div>
+    {% block script %}
+    {% endblock %}
 </body>
 
 </html>
