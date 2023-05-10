@@ -14,7 +14,7 @@
         <div class="topcontainer ">
             <img src="../static/images/logo-white.svg " />
             <div style="display:flex;gap:80px; padding-right:10px;">
-                <a class="text-nav " href="">LOGIN</a>
+                <a class="text-nav " href="{% url 'ashalogin' %}">LOGIN</a>
                 <a class="text-nav " href="#signupsection">SIGN UP</a>
             </div>
         </div>
@@ -72,10 +72,10 @@
                 </div>
 
                 <div class="signupbuttons">
-                    <a href="./womenSignUp.html">               
+                    <a href="{% url 'womenSignUp' %}">               
                         <button  type="submit" style="color:white;background-color:#8B614B;border-radius:40px; width: 150px; height: 30px;">Women</button>
                     </a>
-                    <a href="./ashaSignUp.html">
+                    <a href="{% url 'ashaSignUp' %}">
                         <button onclick="" type="submit" style="color:white;background-color:#8B614B;border-radius:40px;width: 150px; height: 30px;">ASHA Worker</button>
 
                     </a>
