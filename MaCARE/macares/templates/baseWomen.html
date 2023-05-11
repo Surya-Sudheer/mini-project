@@ -7,25 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>women base</title>
     {% block style %} {% endblock %}
-    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/baseWom.css">
 </head>
 
 <body>
-    <div style="background-color: #a77c6f; display: flex; justify-content: center;width:100vw">
-        <div class="topcontainer">
+    <div style="background-color: #a77c6f; display: flex; justify-content: center;width:100vw;postion:fixed;padding:0px">
+        <div class="topcontainer" style="width:100%">
             <img src="../static/images/logo-white.svg" />
             
             <div style="display:flex;gap:20px; padding-right:10px;">
-                <a class="text-nav" href="./wGuideline.html">
+                <a class="text-nav" href="{% url 'wGuideline' %}">
                     <img src="../static/images/Guidlines.svg" alt="">
                 </a>
                 <a class="text-nav" href="./ashaChat.html">
                     <img src="../static/images/chat.svg" alt="">
                 </a>
-                <a class="text-nav" href="./wremainder.html">
+                <a class="text-nav" href="{% url 'wremainder' %}">
                     <img src="../static/images/alarm 1.svg" alt="">
                 </a>
-                <a class="text-nav" href="./wprofile.html">
+                <a class="text-nav" href="{% url 'wprofile' %}">
                     <img src="../static/images/profileIcon .svg" alt="">
                 </a>
                 <a class="text-nav" href="./whome.html">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="content">
+    <div class="content" >
 {% block content %}
 {% endblock %}
     </div>

@@ -24,7 +24,7 @@ body {
 }
 
 .topcontainer {
-    width: 90%;
+    width: 100vw;
     height: 70px;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@ body {
     width:100vw;
 }
 .bottomcontainer{ 
-    width: 90%;
+    width: 100vw;
     height: 80px;
     display: flex;
     align-items: center;
@@ -49,7 +49,6 @@ body {
 }
 .bottomRight{
     display:flex;
-    padding-right:10px;
     gap: 20px;
 }
 
@@ -59,5 +58,5 @@ body {
 }
 
 .content{
-    padding: 0 10%;
+    padding: 0;
 }

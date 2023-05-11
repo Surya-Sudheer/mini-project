@@ -5,20 +5,26 @@
 }
 
 body{
-    padding: 0 10%;
+    padding: 0 ;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .womenList{
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
-    align-items: center;
-    
+    align-items:flex-start;
+    padding: 50px;
 }
 .eachWomen{
-    height: 25px;
-    width: 15%;
     background-color: rgb(240, 228, 215);
     border-radius: 10px;
+    padding: 50px;
 }
 .updated{
     display: flex;
+}
+.new{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
