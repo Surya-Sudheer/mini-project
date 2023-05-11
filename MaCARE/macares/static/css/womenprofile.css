@@ -41,6 +41,17 @@ input{
    
     
 } */
+/* .content{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 4px;
+    justify-content: center;
+    background-color:aqua ;
+    margin-top: 100px;
+   
+    
+} */
 .contentWrapper{
   display: flex;
   align-items: center;
