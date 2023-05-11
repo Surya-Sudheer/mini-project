@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women Guidlines</title>
-    <link rel="stylesheet" href="../static/css/wGuidlines.css">
-   
-</head>
-<body>
-    
-    <h1 style="padding-top:50px;"> Guidlines </h1>
+
+{% extends 'baseWomen.html' %}
+{% block style %}
+<link rel="stylesheet" href="../static/css/wGuidlines.css" />
+{% endblock %}
+
+{% block content %}
+<div class="guidelinewrapperwomen">
         <div class="steps">
             <h2 style="padding-top: 3%;"> Steps of the Website </h2> <br>
 
@@ -851,7 +846,7 @@
             </div>
 
         </div>
-
+</div>
    
-</body>
-</html>
+
+{% endblock %}

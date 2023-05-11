@@ -83,5 +83,14 @@ def ashalogin(request):
 def ashahome(request):
     return render(request,'ashahome.html')
 
+def wGuideline(request):
+    return render(request,'wGuideline.html')
 
+def wremainder(request):
+    return render(request,'wremainder.html')
 
+def wprofile(request):
+    return render(request,'wprofile.html')
+
+def ashaWomenInWard(request):
+    return render(request,'ashaWomenInWard.html')

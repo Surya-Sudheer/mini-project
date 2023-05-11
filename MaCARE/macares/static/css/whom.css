@@ -6,7 +6,13 @@
 }
 
 body{
-    padding: 0 10%;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    padding:0;
+	margin: 0;
+	width: 100vw;
 }
 .womenhomepg{
     height: 100vh;
@@ -72,18 +78,6 @@ a {
 }
 .text{
 	height: 100vh;
-}
-
-/* trans */
-
-html {
-	cursor: pointer;
-}
-
-body{
-	padding: 20px 10%;
-	cursor: default;
-    
 }
 
 .radiobutton{

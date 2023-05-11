@@ -1,6 +1,6 @@
 from django.urls import include,path
 from django import contrib
-from .views import home,womenSignUp,ashaSignUp,ashalogin,whome,ashahome
+from .views import home,womenSignUp,ashaSignUp,ashalogin,whome,ashahome,wGuideline,wremainder,wprofile,ashaWomenInWard
 
 urlpatterns = [
     path('',home,name='home'),
@@ -9,4 +9,9 @@ urlpatterns = [
     path('ashalogin/',ashalogin,name='ashalogin'),
     path('whome/',whome,name='whome'),
     path('ashahome/',ashahome,name='ashahome'),
+    path('wGuideline/',wGuideline,name='wGuideline'),
+    path('wremainder/',wremainder,name='wremainder'),
+    path('wprofile/',wprofile,name='wprofile'),
+    path('ashaWomenInWard/',ashaWomenInWard,name='ashaWomenInWard'),
+   
 ]

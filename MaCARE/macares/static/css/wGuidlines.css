@@ -1,19 +1,22 @@
-*{
-    margin: 0;
-    padding: 0 ;
-    font-family: sans-serif;
-}
 
-body{
-    padding: 0 10%;
-}
 .trimDetailsWrap{
+ 
     display: flex;
     gap: 50px;
 
 }
+
+.guidelinewrapperwomen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  overflow: scroll;
+  margin-top: 200px;
+}
 .steps{
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
      /* align-items: center; */
@@ -27,16 +30,21 @@ body{
   font-size: 20px;
 }
 .trimDetails{
-    height: 100vh;
+  margin-top: 50px;
+    padding: 20px 50px 100px;
 }
 .trimDetailsWrap{
   font-size: 18px;
 }
 .trans{
-    height: 100vh;
+  margin-top: 50px;
+    height: 300px;
+    width: 100vw;
+    overflow: scroll;
+    overflow-y: hidden;
 }
 .card-gallery {
-    height: 70vh;
+    height: 300px;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;

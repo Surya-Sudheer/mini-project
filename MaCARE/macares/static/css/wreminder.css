@@ -4,19 +4,23 @@
     font-family: sans-serif;
 }
 
-body{
-    padding: 0 10%;
+.reminderwomenwrapper{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
 }
 .reminderWrapper{
     background-color:#CFB5A7; 
-    width:70%; 
+    width:fit-content; 
     display:flex;
     flex-direction: row;
-    height:10%; 
+    height:fit-content; 
     gap: 30px;
-    padding: 10px;
+    padding: 20px 40px;
     border-radius: 20px;
-    padding-left: 10px ;
     box-shadow: 2px 2px;
    
    } 
