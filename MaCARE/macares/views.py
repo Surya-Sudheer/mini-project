@@ -180,3 +180,9 @@ def wupdate(request):
 
 def ashaWomenInWard(request):
     return render(request,'ashaWomenInWard.html')
+
+def ashaprofile(request):
+    return render(request,'ashaprofile.html')
+
+def ashaupdate(request):
+    return render(request,'ashaupdate.html')
