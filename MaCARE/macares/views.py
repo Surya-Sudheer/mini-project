@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import User
+from datetime import datetime
 
 def home(request):
     return render(request,'home.html')
@@ -106,8 +107,76 @@ def wprofile(request):
         data = {'status':'You need to login first'}
         return render(request,'womenSignUp.html',context=data)
 
+
+def reverse(s):
+    date_str = s
+    original_format = "%Y-%m-%d"
+    desired_format = "%Y-%m-%d"
+    original_date = datetime.strptime(date_str, original_format)
+
+    desired_date_str = original_date.strftime(desired_format)
+
+    print(desired_date_str)
+    return desired_date_str
+    
+def reversed(s):
+    date_str = s
+    original_format = "%Y-%m-%d"
+    desired_format = "%Y-%m-%d"
+    original_date = datetime.strptime(date_str, original_format)
+
+    desired_date_str = original_date.strftime(desired_format)
+
+    print(desired_date_str)
+    return desired_date_str
+
 def wupdate(request):
-    return render(request,'wupdate.html')
+    if 'email' in request.session:
+        users  = User.objects.get(email=request.session['email'])
+        my_dict = {
+            'name': users.name,
+            'email':users.email,
+            'wardno' : users.wardno,
+            'district': users.district,
+            'phone':users.phone,
+            'panchayath':users.cmp,
+            'rchid'   : users.uid ,
+            'lastmen' : users.lastmen,
+            'lastpg':users.lastpg,
+            'bg':users.bg
+            }
+        if request.method == 'POST':
+            users  = User.objects.get(email=request.session['email'])
+            print(users.name)
+            name = request.POST.get('new_name')
+            district = request.POST.get('newdistric')
+            panchayath = request.POST.get('newpanchayath')
+            wardno = request.POST.get('newwardno')
+            phone = request.POST.get('newphone')
+            lastmen = request.POST.get('newlastmen')
+            lastpg = request.POST.get('newlastpg')
+            bg = request.POST.get('newbg')
+            # rchid = request.POST.get('newrchid')
+         
+            print(name,district,panchayath,wardno,phone,lastmen,lastpg,bg)
+            users.name=name
+            users.district=district
+            users.cmp=panchayath
+            users.wardno=wardno
+            users.phone=phone
+            users.lastmen=reverse(lastmen)
+            users.lastpg=reversed(lastpg)  
+            # users.lastmen=lastmen
+            # users.lastpg=lastpg
+            users.bg=bg
+            users.save()
+            return redirect('wprofile')
+
+        user = User.objects.get(email=request.session['email'])
+        return render(request,'wupdate.html',{'my_dict':my_dict})
+    else:
+        data = {'status':'You need to login first'}
+        return render(request,'ashalogin.html',context=data)
 
 def ashaWomenInWard(request):
     return render(request,'ashaWomenInWard.html')

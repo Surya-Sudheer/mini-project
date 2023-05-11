@@ -6,6 +6,7 @@
 
 
 <form action="{% url 'wupdate' %}" method="post">
+    {% csrf_token %}
     <div class="wupdates-wrapper">
         <div style="display: flex; align-items: center; justify-content: center; ">
 
@@ -15,37 +16,39 @@
                 </div>
                 <div>
                     <p>Name</p>
-                    <input style="width: 100%" type="text" placeholder="   ">
+                    <input style="width: 100%" type="text" placeholder="   " value="{{my_dict.name}}" name="new_name">
                 </div>
 
                 <div class="new">
                     <div>
                         <p>District</p>
-                        <input type="email" placeholder="   District">
+                        <input type="text" placeholder="   District" name="newdistric" value="{{my_dict.district}}">
                         <p>Panchayath</p>
-                        <input type="text" placeholder="   Panchayath">
+                        <input type="text" placeholder="   Panchayath" name="newpanchayath"
+                            value="{{my_dict.panchayath}}">
                         <p>Ward Number</p>
-                        <input type="text" placeholder="   Ward Number">
+                        <input type="text" placeholder="   Ward Number" name="newwardno" value="{{my_dict.wardno}}">
                         <p>Contact</p>
-                        <input type="number" placeholder="   Contact">
+                        <input type="number" placeholder="   Contact" name="newphone" value="{{my_dict.phone}}">
                     </div>
 
                     <div>
-                        <p>Last Menustration</p>
-                        <input type="number" placeholder="   Last Menustration Date">
-                        <p>Last Pregnancy</p>
-                        <input type="number" placeholder="   Date">
+                        <p>Last Menustration Date : {{my_dict.lastpg}} </p>
+                        <input type="date" placeholder="   Last Menustration Date" name="newlastmen"
+                            value="{{my_dict.lastmen}}">
+                        <p>Last Pregnancy Date : {{my_dict.lastpg}}</p>
+                        <input type="date" placeholder="   Date" name="newlastpg" value="{{my_dict.lastpg}}">
                         <p>Blood Group</p>
-                        <input type="number" placeholder="   Blood Group">
+                        <input type="text" placeholder="   Blood Group" name="newbg" value="{{my_dict.bg}}">
                         <p>RCH id</p>
-                        <input type="number" placeholder="   12 digit id ">
+                        <input type="text" placeholder="   12 digit id "  value="{{my_dict.rchid}}">
 
                     </div>
                 </div>
 
                 <div style="display: flex; gap: 5px; padding-top: 20px;">
-                    <a href="./wprofile.html">
-                        <button class="button-71" role="button">Done</button>
+                    <a>
+                        <button class="button-71" role="button" type="submit">Done</button>
                     </a>
                 </div>
 
