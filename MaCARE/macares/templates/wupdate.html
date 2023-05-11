@@ -1,56 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/css/wupdate.css">
-</head>
-<body>
-    <div style="display: flex; align-items: center; justify-content: center; ">
+{% extends 'baseWomen.html' %}
+{% block style %}
+<link rel="stylesheet" href="../static/css/wupdate.css">
+{% endblock %}
+{% block content %}
 
-        <div class="contentWrapper">
-            <div class="img-circle text-center mb-3">
-                <img src="../static/images/profileImg.png" alt="Image" class="shadow">
-            </div>
-            <div>
-                    <p >Name</p>
-                    <input style="width: 690px;" type="text"placeholder="   ">
-            </div>
-            
-            <div class="new">
+
+<form action="{% url 'wupdate' %}" method="post">
+    <div class="wupdates-wrapper">
+        <div style="display: flex; align-items: center; justify-content: center; ">
+
+            <div class="contentWrapper">
+                <div class="img-circle text-center mb-3">
+                    <img src="../static/images/profileIcon .svg" alt="Image" class="shadow">
+                </div>
                 <div>
-                    <p>District</p>
-                        <input type="email"placeholder="   District">
-                    <p>Panchayath</p>  
-                        <input type="text"placeholder="   Panchayath">
-                    <p>Ward Number</p>     
-                        <input type="text"placeholder="   Ward Number">
-                    <p>Contact</p>     
-                        <input type="number"placeholder="   Contact">
+                    <p>Name</p>
+                    <input style="width: 100%" type="text" placeholder="   ">
                 </div>
 
-                <div>
-                    <p>Last Menustration</p>     
-                        <input type="number"placeholder="   Last Menustration Date">
-                    <p>Last Pregnancy</p>     
-                        <input type="number"placeholder="   Date">
-                    <p>Blood Group</p>     
-                        <input type="number"placeholder="   Blood Group">
-                    <p>RCH id</p>     
-                        <input type="number"placeholder="   12 digit id ">
+                <div class="new">
+                    <div>
+                        <p>District</p>
+                        <input type="email" placeholder="   District">
+                        <p>Panchayath</p>
+                        <input type="text" placeholder="   Panchayath">
+                        <p>Ward Number</p>
+                        <input type="text" placeholder="   Ward Number">
+                        <p>Contact</p>
+                        <input type="number" placeholder="   Contact">
+                    </div>
 
+                    <div>
+                        <p>Last Menustration</p>
+                        <input type="number" placeholder="   Last Menustration Date">
+                        <p>Last Pregnancy</p>
+                        <input type="number" placeholder="   Date">
+                        <p>Blood Group</p>
+                        <input type="number" placeholder="   Blood Group">
+                        <p>RCH id</p>
+                        <input type="number" placeholder="   12 digit id ">
+
+                    </div>
                 </div>
+
+                <div style="display: flex; gap: 5px; padding-top: 20px;">
+                    <a href="./wprofile.html">
+                        <button class="button-71" role="button">Done</button>
+                    </a>
+                </div>
+
             </div>
-
-            <div  style="display: flex; gap: 5px; padding-top: 20px;">
-                <a href="./wprofile.html">
-                <button class="button-71" role="button">Done</button>  
-                </a>
-            </div>        
-
         </div>
     </div>
-</body>
-</html>
+</form>
+{% endblock %}

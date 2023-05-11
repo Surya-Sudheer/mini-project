@@ -90,7 +90,24 @@ def wremainder(request):
     return render(request,'wremainder.html')
 
 def wprofile(request):
-    return render(request,'wprofile.html')
+    if 'email' in request.session:
+        users  = User.objects.get(email=request.session['email'])
+        my_dict = {
+            'name': users.name,
+            'email':users.email,
+            'wardno' : users.wardno,
+            'district': users.district,
+            'phone':users.phone,
+            'panchayath':users.cmp,
+            'rchid'   : users.uid  
+        }
+        return render(request,'wprofile.html',{'my_dict':my_dict})
+    else:
+        data = {'status':'You need to login first'}
+        return render(request,'womenSignUp.html',context=data)
+
+def wupdate(request):
+    return render(request,'wupdate.html')
 
 def ashaWomenInWard(request):
     return render(request,'ashaWomenInWard.html')

@@ -3,48 +3,61 @@
 <link rel="stylesheet" href="../static/css/womenprofile.css">
 {% endblock %}
 {% block content %}
-   
-<section>
-    <h1 style="padding-bottom: 5%;">Woman Profile</h1>
+
+<div class="profilewoman-wrapper">
+    <h1>Woman Profile</h1>
 
     <div class="content">
-    
+
         <div class="contentWrapper">
             <div class="img-circle text-center mb-3">
-                <img src="../static/images/profileImg.png" alt="Image" class="shadow">
+                <img src="../static/images/profileIcon .svg" alt="Image" class="shadow">
             </div>
-            
+
             <div class="new">
                 <div>
-                    <p>Name</p>
-                        <input type="text"placeholder="  ">
-                    <p>District</p>
-                        <input type="email"placeholder="     ">
-                    <p>Panchayath</p>  
-                        <input type="text"placeholder="  ">
+                    <div class="labelprofile">
+                        <p>Name :</p>
+                        <p>{{my_dict.name}}</p>
+                    </div>
+                    <div class="labelprofile">
+                        <p>District :</p>
+                        <p>{{my_dict.district}}</p>
+                    </div>
+                    <div class="labelprofile">
+                        <p>Panchayath :</p>
+                        <p>{{my_dict.panchayath}}</p>
+                    </div>
                 </div>
                 <div>
-                    <p>Ward Number</p>     
-                        <input type="text"placeholder="   ">
-                    <p>Contact</p>     
-                        <input type="number"placeholder="   ">            
-                    <p>RCH id</p>     
-                        <input type="number"placeholder="   ">
+                    <div class="labelprofile">
+                        <p>Ward Number :</p>
+                        <p>{{my_dict.wardno}}</p>
+                    </div>
+                    <div class="labelprofile">
+                        <p>Contact :</p>
+                        <p>{{my_dict.phone}}</p>
+                    </div>
+                    <div class="labelprofile">
+                        <p>RCH id :</p>
+                        <p>{{my_dict.rchid}}</p>
+                    </div>
+
                 </div>
             </div>
 
-                <div style="display: flex; gap: 5px; padding-top: 20px;">
-                    <a href="./wupdate.html">
-                    <button  class="up" >Update</button>
-                    </a>
-                    <a href="./whome.html">
-                    <button class="can" >Cancel</button>
-                    </a>
-                </div>
+            <div style="display: flex; gap: 5px; padding-top: 20px;">
+                <a href="{% url 'wupdate' %}">
+                    <button class="up">Update</button>
+                </a>
+                <a href="./whome.html">
+                    <button class="can">Logout</button>
+                </a>
+            </div>
         </div>
     </div>
 
-    </section>
+</div>
 
 
 {% endblock %}
