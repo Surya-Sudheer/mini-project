@@ -1,38 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ASHA profile</title>
-    <link rel="stylesheet" href="../static/css/ashaProfile.css">
-</head>
-<body>
-    <section>
-    <h1>ASHA Worker Profile</h1>
-<div class="content">
-    
-        <div class="contentWrapper">
-            <p>Name</p>
-                <input type="text"placeholder="   Full Name">
-            <p>District</p>
-                <input type="email"placeholder="   District">
-            <p>Panchayath</p>  
-                <input type="text"placeholder="   Panchayath">
-            <p>Ward Number</p>     
-                <input type="text"placeholder="   Ward Number">
-            <p>Contact</p>     
-                <input type="number"placeholder="   Contact">
-                <p>id</p>     
-                <input type="number"placeholder="   id number">
-                    
-    <button class="button-71" role="button">Update</button>
-               
-                    
-            </div>
+{% extends 'baseAsha.html' %} {% block style %}
+<link rel="stylesheet" href="../static/css/ashaprofile.css" />
+{% endblock %} {% block content %}
 
-        </div>
+<div class="profileasha-wrapper">
+  <h1>ASHA Worker Profile</h1>
+
+  <div class="contentWrapper">
+    <div class="img-circle text-center mb-3">
+      <img src="../static/images/profileIcon .svg" alt="Image" class="shadow" />
     </div>
-    </section>
-</body>
-</html>
+
+    <div class="new">
+      <div>
+        <div class="labelprofile">
+          <p>Name :</p>
+          <p>{{my_dict.name}}</p>
+        </div>
+        <div class="labelprofile">
+          <p>District :</p>
+          <p>{{my_dict.district}}</p>
+        </div>
+        <div class="labelprofile">
+          <p>Panchayath :</p>
+          <p>{{my_dict.panchayath}}</p>
+        </div>
+      </div>
+      <div>
+        <div class="labelprofile">
+          <p>Ward Number :</p>
+          <p>{{my_dict.wardno}}</p>
+        </div>
+        <div class="labelprofile">
+          <p>Contact :</p>
+          <p>{{my_dict.phone}}</p>
+        </div>
+        <div class="labelprofile">
+          <p>id :</p>
+          <p>{{my_dict.rchid}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 5px; padding-top: 20px">
+      <a href="{% url 'ashaupdate' %}">
+        <button class="up">Update</button>
+      </a>
+      <a href="{% url 'home' %}">
+        <button class="can">Logout</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
