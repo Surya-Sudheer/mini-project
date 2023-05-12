@@ -90,8 +90,8 @@ a {
 	align-items: center;
 	background-color: rgb(171, 237, 237);
 	border-radius: 15px;
-	gap:20px;
-	width:100%;
+	gap:30px;
+	width:80%;
 	overflow-y: visible;
 	overflow-x: scroll;
 	padding: 20px 20px;
@@ -111,6 +111,7 @@ a {
 
 .weekbutton:checked{
 	border-radius: 1px black;
+	border: 1px solid black;
 }
 
 .current {
@@ -151,7 +152,7 @@ height: 100vh;
 display: flex;
 align-items: center;
 flex-direction: column;
-gap: 10%;
+gap: 5%;
 }
 .update{
 	padding: 5px 10px;

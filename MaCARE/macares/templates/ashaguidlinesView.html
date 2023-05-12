@@ -13,6 +13,68 @@
         <img src="../static/images/lineart .svg" alt="">
 
         <!-- guidline trans week by week after update -->
-    </div>
+
+        <div id="weektrans" class="trans">
+            <h2 style="display: flex; justify-content: center; ">Month wise Updates</h2>
+            
+            <ul class="weeks">
+                <li>
+                    <label for="one" class="weekbutton"> Start </label>
+                    <input class="radiobutton" id="one" type="radio" name="weekno" value="One"/>
+                </li>
+                <li>
+                    <label for="two" class="weekbutton">Month 1</label>
+                    <input class="radiobutton" id="two" type="radio" name="weekno" value="Two"/>
+                </li>
+                <li>
+                    <label for="three" class="weekbutton">Month 2</label>
+                    <input class="radiobutton" id="three" type="radio" name="weekno" value="Three"/>
+                </li>
+                <li>
+                    <label for="four" class="weekbutton">Month 3</label>
+                    <input class="radiobutton" id="four" type="radio" name="weekno" value="Four"/>
+                </li>
+                <li>
+                    <label for="five" class="weekbutton">Month 4</label>
+                    <input class="radiobutton" id="five" type="radio" name="weekno" value="Five"/>
+                </li>
+                <li>
+                    <label for="six" class="weekbutton">Month 5</label>
+                    <input class="radiobutton" id="six" type="radio" name="weekno" value="Six"/>
+                </li>
+                <li>
+                    <label for="seven" class="weekbutton">Month 6</label>
+                    <input class="radiobutton" id="seven" type="radio" name="weekno" value="Seven"/>
+                </li>
+                <li>
+                    <label for="eight" class="weekbutton">Month 7</label>
+                    <input class="radiobutton" id="eight" type="radio" name="weekno" value="Eight"/>
+                </li>
+                <li>
+                    <label for="nine" class="weekbutton">Month 8</label>
+                    <input class="radiobutton" id="nine" type="radio" name="weekno" value="Nine"/>
+                </li>
+                        <li>
+                    <label for="ten" class="weekbutton">Month 9</label>
+                    <input class="radiobutton" id="ten" type="radio" name="weekno" value="Ten"/>
+                </li>       
+            </ul>
+     
+        </div>
+        
+    <script>
+        $(document).ready(function(){
+            $('input[type="radio"]').click(function(){
+                var demovalue = $(this).val(); 
+                $("div.myDiv").hide();
+                $("#show"+demovalue).show();
+            });
+        });
+
+        $('input[type="radio"]').on('change', function() {
+            $('input[type="radio"]').closest('li.current').removeClass('current');
+            $(this).closest('li').addClass('current');
+        });
+    </script>
 </body>
 </html>
