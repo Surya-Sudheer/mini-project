@@ -6,10 +6,13 @@
         padding: 20px;
         background-color: rgb(243, 224, 224);
         border-radius: 10px;
-        width: 900px;
-        height: 450px;
         overflow: auto;
         font-size: 16px;
+        display: flex; 
+        justify-content: center;
+        width: 900px;
+        height: 700px;
+        flex-direction:column;
     }
 
     .insidemyDiv {
@@ -33,9 +36,8 @@
 {% endblock %}
 {% block monthcontent %}
 
-<div style="display: flex;  justify-content: center;width: 900px;
-            height: 450px;">
-    <div id="showTen" class="myDiv">
+<div class="myDiv">
+   
         <h3 class="caluWeek">Time has arrived...! </h3>
         <div class="insidemyDiv">
             <p class="instruction"> * Pay attention to your baby's movements: You may notice a decrease in your baby's
@@ -96,6 +98,6 @@
         </div>
 
         <button class="update">Update</button>
-    </div>
+    
 </div>
 {% endblock %}

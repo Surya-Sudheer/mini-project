@@ -36,7 +36,7 @@
     <div id="weektrans" class="trans">
         <h2 style="display: flex; justify-content: center; ">Month wise Updates</h2>
 
-        <ul class="weeks">
+        {% comment %} <ul class="weeks">
             <li>
                 <a href="{% url 'start' %}">
                     <label for="one" class="weekbutton"> Start </label>
@@ -84,7 +84,7 @@
                 <label for="ten" class="weekbutton">Month 9</label>
                 <input class="radiobutton" id="ten" type="radio" name="weekno" value="Ten" />
             </li>
-        </ul>
+        </ul> {% endcomment %}
         <div class="monthdata-wrapper">
             <div class="monthdata">
                 <a href="{% url 'start' %}">
@@ -139,7 +139,7 @@
 
         </div>
 
-        <div style="background-color: rgb(168, 18, 18);">
+        <div style="background-color: white;">
             {% block monthcontent %}{% endblock %}
         </div>
     </div>

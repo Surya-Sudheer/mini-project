@@ -7,10 +7,13 @@
         padding: 20px;
         background-color: rgb(243, 224, 224);
         border-radius: 10px;
-        width: 900px;
-        height: 450px;
         overflow: auto;
         font-size: 16px;
+        display: flex; 
+        justify-content: center;
+        width: 900px;
+        height: 550px;
+        flex-direction:column;
     }
 
     .insidemyDiv {
@@ -32,9 +35,8 @@
 </style>
 {% endblock %}
 {% block monthcontent %}
-<div style="display: flex;  justify-content: center;width: 900px;
-        height: 450px;">
-    <div id="showThree" class="myDiv">
+<div class="myDiv">
+    
         <h3 class="caluWeek">7 months to go....! </h3>
         <div class="insidemyDiv">
             <p class="instruction"> * Continue taking prenatal vitamins: Prenatal vitamins are important throughout your
@@ -85,7 +87,7 @@
 
         <button class="update">Update</button>
 
-    </div>
+    
 
 </div>
 {% endblock %}

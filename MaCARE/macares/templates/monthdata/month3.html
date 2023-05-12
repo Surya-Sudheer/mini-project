@@ -3,13 +3,16 @@
 {% block monthstyle %}
     <style>
         .myDiv{
-            padding:20px;
-            background-color: rgb(243, 224, 224);
-            border-radius: 10px;
-            width: 900px;
-            height: 450px;
-            overflow: auto;
-            font-size: 16px;
+        padding: 20px;
+        background-color: rgb(243, 224, 224);
+        border-radius: 10px;
+        overflow: auto;
+        font-size: 16px;
+        display: flex; 
+        justify-content: center;
+        width: 900px;
+        height: 600px;
+        flex-direction:column;
             } 
         .insidemyDiv{
             display: flex; 
@@ -29,9 +32,8 @@
       
 {% endblock %}
 {% block monthcontent %}
-    <div style="display: flex;  justify-content: center;width: 900px;
-        height: 450px;">
-        <div id="showFour" class="myDiv">
+    <div class="myDiv">
+       
             <h3 class="caluWeek">6 months to go....!  </h3>
             <div class="insidemyDiv" >
                 <p class="instruction"> * Your healthcare provider may recommend certain prenatal tests, such as the NIPT (non-invasive prenatal testing) or CVS (chorionic villus sampling). </p> 
@@ -84,7 +86,6 @@
             
             <button class="update">Update</button>
     
-        </div>
-    
+       
     </div>
 {% endblock %}
