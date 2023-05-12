@@ -5,22 +5,30 @@
 }
 
 .reminderwomenwrapper{
+    padding-top: 100px;
+    padding-bottom: 70px;
+    padding: 100px 50px;
     display: flex;
-    width: 100vw;
+    /* width: 100vw; */
+    
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
     flex-direction: column;
 }
 .reminderWrapper{
     background-color:#CFB5A7; 
-    width:fit-content; 
+    /* width: 70%; */
+    /* width:fit-content;  */
     display:flex;
     flex-direction: row;
-    height:fit-content; 
+    /* height:fit-content;  */
     gap: 30px;
     padding: 20px 40px;
     border-radius: 20px;
-    box-shadow: 2px 2px;
-   
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.1);
    } 
+
+   .reminder{
+    /* width: 70%; */
+   }
