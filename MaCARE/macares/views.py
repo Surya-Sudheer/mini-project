@@ -54,7 +54,6 @@ def ashaSignUp(request):
             user = User(name=name,email=email,password=password,occupation=occupation,cmp=cmp,phone=phone,wardno=wardno,district=district,ashaid=ashaid)
             user.save()
             email = [email]
-            request.session['uname'] = name
             request.session['email'] = email
             request.session['occupation'] = occupation
             return ashahome(request)
@@ -147,7 +146,7 @@ def wupdate(request):
             }
         if request.method == 'POST':
             users  = User.objects.get(email=request.session['email'])
-            print(users.name)
+            print(users.email)
             name = request.POST.get('new_name')
             district = request.POST.get('newdistric')
             panchayath = request.POST.get('newpanchayath')
@@ -179,7 +178,20 @@ def wupdate(request):
         return render(request,'ashalogin.html',context=data)
 
 def ashaWomenInWard(request):
-    return render(request,'ashaWomenInWard.html')
+    users = User.objects.all()
+    user_data = []
+    if 'email' in request.session:
+        user  = User.objects.get(email=request.session['email'])
+        print(user.email)
+        for i in users:
+            if i.occupation == "women" and i.wardno==user.wardno:
+                user_data.append({'name':i.name})
+        print(user_data)
+        return render(request,'ashaWomenInWard.html',{'user_data':user_data})
+    else:
+        data = {'status':'You need to login first'}
+        return render(request,'ashalogin.html',context=data)
+    
 
 def ashaprofile(request):
     return render(request,'ashaprofile.html')

@@ -6,10 +6,13 @@
         padding: 20px;
         background-color: rgb(243, 224, 224);
         border-radius: 10px;
-        width: 900px;
-        height: 450px;
         overflow: auto;
         font-size: 16px;
+        display: flex; 
+        justify-content: center;
+        width: 900px;
+        height: 650px;
+        flex-direction:column;
     }
 
     .insidemyDiv {
@@ -31,9 +34,8 @@
 </style>
 {% endblock %}
 {% block monthcontent %}
-<div style="display: flex;  justify-content: center;width: 900px;
-        height: 450px;">
-    <div id="showFive" class="myDiv">
+<div  class="myDiv">
+    
         <h3 class="caluWeek">5 months to go....! </h3>
         <div class="insidemyDiv">
             <p class="instruction"> *Consider genetic testing: Your healthcare provider may recommend genetic testing
@@ -94,7 +96,7 @@
         </div>
 
         <button class="update">Update</button>
-    </div>
+    
 
 </div>
 {% endblock %}

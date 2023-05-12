@@ -3,13 +3,16 @@
 {% block monthstyle %}
     <style>
         .myDiv{
-            padding:20px;
+            padding: 20px;
             background-color: rgb(243, 224, 224);
             border-radius: 10px;
-            width: 900px;
-            height: 450px;
             overflow: auto;
             font-size: 16px;
+            display: flex; 
+            justify-content: center;
+            width: 900px;
+            height: 700px;
+            flex-direction:column;
             } 
         .insidemyDiv{
             display: flex; 
@@ -28,9 +31,8 @@
     </style>
 {% endblock %}
 {% block monthcontent %}
-    <div style="display: flex;  justify-content: center;width: 900px;
-        height: 450px;">
-        <div id="showNine" class="myDiv">
+    <div class="myDiv">
+        
             <h3 class="caluWeek">1 months to go....! </h3>
             <div class="insidemyDiv" >
                 <p class="instruction"> *  Learn about postpartum care: It's important to learn about postpartum care for both you and your baby, including breastfeeding, postpartum recovery, and newborn care.</p> 
@@ -80,6 +82,6 @@
                 <input type="checkbox"> 
             </div>  
         <button class="update">Update</button>
-        </div>
+       
     </div>
 {% endblock %}

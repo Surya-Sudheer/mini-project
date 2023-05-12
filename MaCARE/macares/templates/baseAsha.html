@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>asha base</title>
     {% block style %} {% endblock %}
-    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/baseAsha.css">
 </head>
 
 <body>
-    <div style="background-color: #a77c6f; display: flex; justify-content: center;width:100vw">
-        <div class="topcontainer">
+    <div style="background-color: #a77c6f; display: flex; justify-content: center;width:100vw;position:fixed;padding:0px">
+        <div class="topcontainer" style="width:100%">
             <img src="../static/images/logo-white.svg" />
-            <div style="display:flex;gap:20px; padding-right:10px;postion:fixed;">
+            
+            <div style="display:flex;gap:20px; padding-right:10px;">
                 <a class="text-nav" href="{% url 'ashaWomenInWard' %}">
                     <img src="../static/images/your ward.svg" alt="">
                 </a>

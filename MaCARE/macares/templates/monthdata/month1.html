@@ -10,6 +10,11 @@
         height: 450px;
         overflow: auto;
         font-size: 16px;
+        display: flex; 
+        justify-content: center;
+        width: 900px;
+        height: 450px;
+        flex-direction:column;
     }
 
     .insidemyDiv {
@@ -32,10 +37,8 @@
 
 {% endblock %}
 {% block monthcontent %}
-<div style="display: flex;  justify-content: center;width: 900px;
+<div class="myDiv"style="display: flex;  justify-content: center;width: 900px;
         height: 450px;">
-
-    <div id="showTwo" class="myDiv">
         <h3 class="caluWeek">8 months to go....! </h3>
         <div class="insidemyDiv">
             <p class="instruction"> * Make an appointment with your OBGYN to verify that you're pregnant </p>
@@ -80,7 +83,8 @@
 
 
         <button class="update">Update</button>
+    
 
-    </div>
+    
 </div>
 {% endblock %}
