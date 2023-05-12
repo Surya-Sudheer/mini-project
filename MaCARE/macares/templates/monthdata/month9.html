@@ -1,92 +1,101 @@
+{% extends 'whome.html' %}
 
+{% block monthstyle %}
+<style>
+    .myDiv {
+        padding: 20px;
+        background-color: rgb(243, 224, 224);
+        border-radius: 10px;
+        width: 900px;
+        height: 450px;
+        overflow: auto;
+        font-size: 16px;
+    }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>month1</title>
+    .insidemyDiv {
+        display: flex;
+        gap: 20%;
+    }
 
-    <style>
-        .myDiv{
-            padding:20px;
-            background-color: rgb(243, 224, 224);
-            border-radius: 10px;
-            width: 900px;
-            height: 450px;
-            overflow: auto;
-            font-size: 16px;
-            } 
-        .insidemyDiv{
-            display: flex; 
-            gap: 20%;
-            }
-        .caluWeek{
-            padding-bottom: 10px;
-            display: flex;
-            justify-content: center;
-            }
-        .update{
-            padding: 5px 10px;
-            border-radius: 10px;
-            float: right;
-            }
-    </style>
-      
-</head>
-<body>
-    <div style="display: flex;  justify-content: center;">
-        <div id="showTen" class="myDiv">
-            <h3 class="caluWeek">Time has arrived...! </h3>
-            <div class="insidemyDiv" >
-                <p class="instruction"> *  Pay attention to your baby's movements: You may notice a decrease in your baby's 
-                    movements as you near the end of your pregnancy. If you have any concerns, contact a healthcare provider right away.
-                    </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> *  Finalize your birth plan: Review and finalize your birth plan with your healthcare provider. Make sure that you have made arrangements for transportation to the hospital or birth center.
-                </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Learn about labor and delivery: Review the signs of labor and delivery, and learn about pain management options. Consider taking a childbirth education class to help prepare you for labor and delivery.
-                </p> 
-                <input type="checkbox"> 
-            </div>
-            <div class="insidemyDiv" >
-                <p class="instruction"> *Pack your hospital bag: Pack your hospital bag with all of the essentials that you will need during your hospital stay, including clothes for you and your baby, toiletries, and any necessary paperwork.
-                </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> *  Rest as much as possible: As your body prepares for labor and delivery, it's important to get as much rest as possible. Try to take naps during the day, and get plenty of sleep at night.</p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Monitor your weight gain: Continue to monitor your weight gain to ensure that you are gaining enough weight to support your baby's growth and development.
-                </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> *Stay hydrated: Drink plenty of water to help prevent dehydration, which can lead to complications.
-                </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> *Prepare for postpartum care: Learn about postpartum care for both you and your baby, including breastfeeding, postpartum recovery, and newborn care.
-                </p> 
-                <input type="checkbox"> 
-            </div>
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Get support: Lean on your partner, family, and friends for emotional and physical support during this exciting time.
-                </p> 
-                <input type="checkbox"> 
-            </div>  
-        
-        <button class="update">Update</button>
+    .caluWeek {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .update {
+        padding: 5px 10px;
+        border-radius: 10px;
+        float: right;
+    }
+</style>
+
+{% endblock %}
+{% block monthcontent %}
+
+<div style="display: flex;  justify-content: center;width: 900px;
+            height: 450px;">
+    <div id="showTen" class="myDiv">
+        <h3 class="caluWeek">Time has arrived...! </h3>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Pay attention to your baby's movements: You may notice a decrease in your baby's
+                movements as you near the end of your pregnancy. If you have any concerns, contact a healthcare provider
+                right away.
+            </p>
+            <input type="checkbox">
         </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Finalize your birth plan: Review and finalize your birth plan with your healthcare
+                provider. Make sure that you have made arrangements for transportation to the hospital or birth center.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Learn about labor and delivery: Review the signs of labor and delivery, and learn
+                about pain management options. Consider taking a childbirth education class to help prepare you for
+                labor and delivery.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> *Pack your hospital bag: Pack your hospital bag with all of the essentials that you
+                will need during your hospital stay, including clothes for you and your baby, toiletries, and any
+                necessary paperwork.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Rest as much as possible: As your body prepares for labor and delivery, it's
+                important to get as much rest as possible. Try to take naps during the day, and get plenty of sleep at
+                night.</p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Monitor your weight gain: Continue to monitor your weight gain to ensure that you
+                are gaining enough weight to support your baby's growth and development.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> *Stay hydrated: Drink plenty of water to help prevent dehydration, which can lead to
+                complications.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> *Prepare for postpartum care: Learn about postpartum care for both you and your
+                baby, including breastfeeding, postpartum recovery, and newborn care.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Get support: Lean on your partner, family, and friends for emotional and physical
+                support during this exciting time.
+            </p>
+            <input type="checkbox">
+        </div>
+
+        <button class="update">Update</button>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}

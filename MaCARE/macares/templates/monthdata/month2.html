@@ -1,84 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>month1</title>
+{% extends 'whome.html' %}
 
-    <style>
-        .myDiv{
-            padding:20px;
-            background-color: rgb(243, 224, 224);
-            border-radius: 10px;
-            width: 900px;
-            height: 450px;
-            overflow: auto;
-            font-size: 16px;
-            } 
-        .insidemyDiv{
-            display: flex; 
-            gap: 20%;
-            }
-        .caluWeek{
-            padding-bottom: 10px;
-            display: flex;
-            justify-content: center;
-            }
-        .update{
-            padding: 5px 10px;
-            border-radius: 10px;
-            float: right;
-            }
-    </style>
-      
-</head>
-<body>
-    <div style="display: flex;  justify-content: center;">
-        <div id="showThree" class="myDiv">
-            <h3 class="caluWeek">7 months to go....!  </h3>
-            <div class="insidemyDiv" >
-                <p class="instruction"> *  Continue taking prenatal vitamins: Prenatal vitamins are important throughout your pregnancy, so make sure you continue taking them.  </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> *  Stay hydrated: Drink plenty of water and avoid sugary drinks and caffeine.  </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> *  Eat a healthy diet: Eat plenty of fruits, vegetables, whole grains, and lean proteins. Avoid processed foods, sugary drinks, and foods high in saturated fats.  </p> 
-                <input type="checkbox">
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> *Exercise: Moderate exercise is safe during pregnancy and can help you feel better. Talk to your healthcare provider about what exercises are safe for you to do.  </p> <br>
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Schedule your first prenatal appointment:Schedule your first prenatal appointment with your healthcare provider. They can answer any questions you may have and monitor your pregnancy.  </p> <br>
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Manage morning sickness:  Try eating small, frequent meals throughout the day, and avoid foods that trigger nausea. </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * As your breasts show symptoms of heaviness, begin using supportive bras to prevent sagging later. </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Get plenty of rest: Pregnancy can be tiring, so make sure you're getting plenty of rest. Try to aim for 7-8 hours of sleep each night.  </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Avoid certain foods: Continue to avoid raw or undercooked meat, fish, and eggs, and unpasteurized dairy products. </p> 
-                <input type="checkbox"> 
-            </div>  
-            
-            
-            <button class="update">Update</button>
-        
+{% block monthstyle %}
+
+<style>
+    .myDiv {
+        padding: 20px;
+        background-color: rgb(243, 224, 224);
+        border-radius: 10px;
+        width: 900px;
+        height: 450px;
+        overflow: auto;
+        font-size: 16px;
+    }
+
+    .insidemyDiv {
+        display: flex;
+        gap: 20%;
+    }
+
+    .caluWeek {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .update {
+        padding: 5px 10px;
+        border-radius: 10px;
+        float: right;
+    }
+</style>
+{% endblock %}
+{% block monthcontent %}
+<div style="display: flex;  justify-content: center;width: 900px;
+        height: 450px;">
+    <div id="showThree" class="myDiv">
+        <h3 class="caluWeek">7 months to go....! </h3>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Continue taking prenatal vitamins: Prenatal vitamins are important throughout your
+                pregnancy, so make sure you continue taking them. </p>
+            <input type="checkbox">
         </div>
-    
+        <div class="insidemyDiv">
+            <p class="instruction"> * Stay hydrated: Drink plenty of water and avoid sugary drinks and caffeine. </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Eat a healthy diet: Eat plenty of fruits, vegetables, whole grains, and lean
+                proteins. Avoid processed foods, sugary drinks, and foods high in saturated fats. </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> *Exercise: Moderate exercise is safe during pregnancy and can help you feel better.
+                Talk to your healthcare provider about what exercises are safe for you to do. </p> <br>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Schedule your first prenatal appointment:Schedule your first prenatal appointment
+                with your healthcare provider. They can answer any questions you may have and monitor your pregnancy.
+            </p> <br>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Manage morning sickness: Try eating small, frequent meals throughout the day, and
+                avoid foods that trigger nausea. </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * As your breasts show symptoms of heaviness, begin using supportive bras to prevent
+                sagging later. </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Get plenty of rest: Pregnancy can be tiring, so make sure you're getting plenty of
+                rest. Try to aim for 7-8 hours of sleep each night. </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Avoid certain foods: Continue to avoid raw or undercooked meat, fish, and eggs,
+                and unpasteurized dairy products. </p>
+            <input type="checkbox">
+        </div>
+
+
+        <button class="update">Update</button>
+
     </div>
-</body>
-</html>
+
+</div>
+{% endblock %}

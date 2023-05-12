@@ -189,3 +189,33 @@ def ashaupdate(request):
 
 def ashaGuidlinesView(request):
     return render(request,'ashaGuidlinesView.html')
+
+def start(request):
+    return render(request,'monthdata/start.html')
+
+def month1(request):
+    return render(request,'monthdata/month1.html')
+
+def month2(request):
+    return render(request,'monthdata/month2.html')
+
+def month3(request):
+    return render(request,'monthdata/month3.html')
+
+def month4(request):
+    return render(request,'monthdata/month4.html')
+
+def month5(request):
+    return render(request,'monthdata/month5.html')
+
+def month6(request):
+    return render(request,'monthdata/month6.html')
+
+def month7(request):
+    return render(request,'monthdata/month7.html')
+
+def month8(request):
+    return render(request,'monthdata/month8.html')
+
+def month9(request):
+    return render(request,'monthdata/month9.html')

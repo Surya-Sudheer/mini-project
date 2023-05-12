@@ -1,89 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>month1</title>
+{% extends 'whome.html' %}
 
-    <style>
-        .myDiv{
-            padding:20px;
-            background-color: rgb(243, 224, 224);
-            border-radius: 10px;
-            width: 900px;
-            height: 450px;
-            overflow: auto;
-            font-size: 16px;
-            } 
-        .insidemyDiv{
-            display: flex; 
-            gap: 20%;
-            }
-        .caluWeek{
-            padding-bottom: 10px;
-            display: flex;
-            justify-content: center;
-            }
-        .update{
-            padding: 5px 10px;
-            border-radius: 10px;
-            float: right;
-            }
-    </style>
-      
-</head>
-<body>
-    <div style="display: flex;  justify-content: center;">
-        <div id="showSix" class="myDiv">   
-            <h3 class="caluWeek">4 months to go....! </h3>
-            <div class="insidemyDiv" >
-                <p class="instruction"> *Consider a fetal anatomy ultrasound: Your healthcare provider may recommend a fetal anatomy ultrasound during this stage of pregnancy. This can help identify any potential issues with your baby's development.
-                </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Your healthcare provider may recommend a glucose screening test to check for gestational diabetes.
-                </p> 
-                <input type="checkbox"> 
-            </div>  
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Take care of physical discomforts, such as back pain and heartburn if you experience any.
-                </p> 
-                <input type="checkbox"> 
-            </div>
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Eat a healthy diet: Make sure you're getting plenty of fruits, vegetables, whole grains, and lean proteins. Avoid processed foods, sugary drinks, and foods high in saturated fats.
-                </p> 
-                <input type="checkbox"> 
-            </div> 
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Continue taking prenatal vitamins: Prenatal vitamins are important throughout your pregnancy, so make sure you continue taking them as directed by your healthcare provider.
-                </p> 
-                <input type="checkbox"> 
-            </div> 
-            <div class="insidemyDiv" >
-                <p class="instruction"> *Stay hydrated: Drink plenty of water and avoid sugary drinks and caffeine.
-                </p> 
-                <input type="checkbox"> 
-            </div> 
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Exercise: Moderate exercise is safe during pregnancy and can help you feel better. Talk to your healthcare provider about what exercises are safe for you to do.
-                </p> 
-                <input type="checkbox"> 
-            </div> 
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Start preparing for baby's arrival: Now is a good time to start preparing for your baby's arrival. Consider creating a baby registry, planning the nursery, and thinking about childcare options.
-                </p> 
-                <input type="checkbox"> 
-            </div> 
-            <div class="insidemyDiv" >
-                <p class="instruction"> * Schedule prenatal appointments: Make sure you attend all of your prenatal appointments with your healthcare provider. They will monitor your pregnancy and answer any questions you may have.
-                </p> 
-                <input type="checkbox"> 
-            </div> 
-        <button class="update">Update</button>
+{% block monthstyle %}
+<style>
+    .myDiv {
+        padding: 20px;
+        background-color: rgb(243, 224, 224);
+        border-radius: 10px;
+        width: 900px;
+        height: 450px;
+        overflow: auto;
+        font-size: 16px;
+    }
+
+    .insidemyDiv {
+        display: flex;
+        gap: 20%;
+    }
+
+    .caluWeek {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .update {
+        padding: 5px 10px;
+        border-radius: 10px;
+        float: right;
+    }
+</style>
+{% endblock %}
+{% block monthcontent %}
+<div style="display: flex;  justify-content: center;width: 900px;
+        height: 450px;">
+    <div id="showSix" class="myDiv">
+        <h3 class="caluWeek">4 months to go....! </h3>
+        <div class="insidemyDiv">
+            <p class="instruction"> *Consider a fetal anatomy ultrasound: Your healthcare provider may recommend a fetal
+                anatomy ultrasound during this stage of pregnancy. This can help identify any potential issues with your
+                baby's development.
+            </p>
+            <input type="checkbox">
         </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Your healthcare provider may recommend a glucose screening test to check for
+                gestational diabetes.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Take care of physical discomforts, such as back pain and heartburn if you
+                experience any.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Eat a healthy diet: Make sure you're getting plenty of fruits, vegetables, whole
+                grains, and lean proteins. Avoid processed foods, sugary drinks, and foods high in saturated fats.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Continue taking prenatal vitamins: Prenatal vitamins are important throughout your
+                pregnancy, so make sure you continue taking them as directed by your healthcare provider.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> *Stay hydrated: Drink plenty of water and avoid sugary drinks and caffeine.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Exercise: Moderate exercise is safe during pregnancy and can help you feel better.
+                Talk to your healthcare provider about what exercises are safe for you to do.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Start preparing for baby's arrival: Now is a good time to start preparing for your
+                baby's arrival. Consider creating a baby registry, planning the nursery, and thinking about childcare
+                options.
+            </p>
+            <input type="checkbox">
+        </div>
+        <div class="insidemyDiv">
+            <p class="instruction"> * Schedule prenatal appointments: Make sure you attend all of your prenatal
+                appointments with your healthcare provider. They will monitor your pregnancy and answer any questions
+                you may have.
+            </p>
+            <input type="checkbox">
+        </div>
+        <button class="update">Update</button>
     </div>
-</body>
-</html>
+</div>
+{% endblock %}
