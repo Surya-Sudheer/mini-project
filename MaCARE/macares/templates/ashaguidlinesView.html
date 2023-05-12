@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASHA Guidlines View</title>
-    <link rel="stylesheet" href="../static/css/ashaGuidlinesView.css">
-</head>
+{% extends 'baseAsha.html' %}
+{% block style %}<link rel="stylesheet" href="../static/css/ashaGuidlinesView.css"> {% endblock %}
+{% block content %}
+    
+
 <body>
-    <h3>Woman Name</h3>
+    <h3>Women Name</h3>
     <div class="updated">
         <img src="../static/images/lineart .svg" alt="">
 
@@ -77,4 +73,4 @@
         });
     </script>
 </body>
-</html>
+{% endblock %}

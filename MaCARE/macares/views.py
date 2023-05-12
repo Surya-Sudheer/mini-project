@@ -186,3 +186,6 @@ def ashaprofile(request):
 
 def ashaupdate(request):
     return render(request,'ashaupdate.html')
+
+def ashaGuidlinesView(request):
+    return render(request,'ashaGuidlinesView.html')
