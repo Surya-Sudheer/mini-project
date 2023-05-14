@@ -64,7 +64,6 @@ def ashalogin(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-
         user = User.objects.get(email=email)
         print(user.occupation)
         occupation = user.occupation
