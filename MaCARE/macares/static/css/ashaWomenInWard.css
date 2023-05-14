@@ -13,12 +13,18 @@ body{
     /* height: 100vh; */
     display: flex;
     align-items:flex-start;
-    padding: 50px;
+    /* padding: 50px; */
+    margin-top: 80px;
 }
 .eachWomen{
     background-color: rgb(240, 228, 215);
     border-radius: 10px;
-    padding: 50px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 80px;
+    width: 80px; */
 }
 .updated{
     display: flex;
@@ -26,5 +32,5 @@ body{
 .new{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
