@@ -17,14 +17,15 @@
                 <div class="eachWomen">
                     <a style="display: flex; justify-content:center;align-items: center ;height: 30px;" href="#"onclick="toggleDiv()">{{user.name}}</a>
                 </div>     
+                <div id="myDiv" class="popup" style="display:none;position: absolute;top: 50%;left: 80%;transform: translate(-50%, -50%);width: 200px;
+                height: 100px;background-color: #fff;border: 1px solid #000;padding: 10px;" onclick="toggleDiv()">
+                   {{user.wardno}}
+                </div>
                {% endfor %}
                
             </div>
     </div>
-    <div id="myDiv" class="popup" style="display:none;position: absolute;top: 50%;left: 80%;transform: translate(-50%, -50%);width: 200px;
-      height: 100px;background-color: #fff;border: 1px solid #000;padding: 10px;" onclick="toggleDiv()">
-         This is my div content
-      </div>
+   
          
     <script>
       

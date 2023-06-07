@@ -22,3 +22,16 @@ class User(models.Model):
     def __str__(self):
         return self.email
     
+class Month(models.Model):
+    uid=models.IntegerField()
+    mid= models.AutoField(primary_key=True)
+    data_dict = {
+        'did' : '0',
+        'title' : 'awesome title',
+        'body' : 'great body of text',
+    }
+    
+# class atri(models.Model):
+#     uid=models.IntegerField()
+#     month = models.ForeignKey(Month)
+    

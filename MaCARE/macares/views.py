@@ -184,7 +184,7 @@ def ashaWomenInWard(request):
         print(user.email)
         for i in users:
             if i.occupation == "women" and i.wardno==user.wardno:
-                user_data.append({'name':i.name})
+                user_data.append({'name':i.name,'wardno':i.wardno})
         print(user_data)
         return render(request,'ashaWomenInWard.html',{'user_data':user_data})
     else:
@@ -205,6 +205,7 @@ def start(request):
     return render(request,'monthdata/start.html')
 
 def month1(request):
+    
     return render(request,'monthdata/month1.html')
 
 def month2(request):
