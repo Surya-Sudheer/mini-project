@@ -1,45 +1,98 @@
-{% extends 'baseAsha.html' %}
-{% block style %}<link rel="stylesheet" href="../static/css/ashaWomenInWard.css"> {% endblock %}
-{% block content %}
+{% extends 'baseAsha.html' %} {% block style %}<link
+  rel="stylesheet"
+  href="../static/css/ashaWomenInWard.css"
+/>
 
-
-
+<style>
+  .ashaworkerwomenin {
+    display: flex;
+  }
+  .newblock {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    background: rgba(230, 230, 245, 0.5);
+  }
+</style>
+{% endblock %} {% block content %}
 
 <body>
-    
-    <h2>Pregnant Women in your ward</h2>
-    <div class="womenList">
-        <!-- this <a> tag lead to each women guidline update -->
-        <!-- "jfbngvj" -->
-        
-            <div class="new">
-                {% for user in user_data %}
-                <div class="eachWomen">
-                    <a style="display: flex; justify-content:center;align-items: center ;height: 30px;" href="#"onclick="toggleDiv()">{{user.name}}</a>
-                </div>     
-                <div id="myDiv" class="popup" style="display:none;position: absolute;top: 50%;left: 80%;transform: translate(-50%, -50%);width: 200px;
-                height: 100px;background-color: #fff;border: 1px solid #000;padding: 10px;" onclick="toggleDiv()">
-                   {{user.wardno}}
-                </div>
-               {% endfor %}
-               
-            </div>
+  <h2>Pregnant Women in your ward</h2>
+  <div class="womenList">
+    <!-- this <a> tag lead to each women guidline update -->
+    <!-- "jfbngvj" -->
+
+    <div class="newblock">
+      {% for user in user_data %}
+
+      <div
+        id="myDiv"
+        style="
+          display: flex;
+          width: fit-content;
+          height: fit-content;
+          background-color: #CFB5A7;
+          border: 1px solid #000;
+          padding: 10px;
+          flex-direction: column;
+          border-radius:20px;
+        "
+      >
+        <div class="ashaworkerwomenin">
+          <p>Name :</p>
+          <p>{{user.name}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>Ward No :</p>
+          <p>{{user.wardno}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>email :</p>
+          <p>{{user.email}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>district :</p>
+          <p>{{user.district}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>phone :</p>
+          <p>{{user.phone}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>panchayath :</p>
+          <p>{{user.panchayath}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>rchid :</p>
+          <p>{{user.rchid}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>lastmen :</p>
+          <p>{{user.lastmen}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>lastpg :</p>
+          <p>{{user.lastpg}}</p>
+        </div>
+        <div class="ashaworkerwomenin">
+          <p>bg :</p>
+          <p>{{user.bg}}</p>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-   
-         
-    <script>
-      
+  </div>
 
-        function toggleDiv() {
-
-           var div = document.getElementById('myDiv');
-           if (div.style.display === "none") {
-              div.style.display = "inline-block";
-           } else {
-              div.style.display = "none";
-           }
-        }
-      </script>
-     
+  <script>
+    function toggleDiv() {
+      var div = document.getElementById("myDiv");
+      if (div.style.display === "none") {
+        div.style.display = "inline-block";
+      } else {
+        div.style.display = "none";
+      }
+    }
+  </script>
 </body>
 {% endblock %}
