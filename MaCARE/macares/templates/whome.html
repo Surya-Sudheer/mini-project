@@ -9,13 +9,14 @@
       <div style="display: flex; gap: 30px">
         <div style="display: flex;  flex-direction: column">
           <div>
-            <pre> <strong> Hey {{my_dict.name}},<br><br></strong>      its your 7th week <br>      on the journey <br>      of 33 weeks 
+            <pre> <strong>Hey {{my_dict.name}},<br><br></strong> The womb is a magical place <br> where new life blossoms, and <br> the mother's love nourishes it...! <br> Stay healthy .. 
                         </pre>
           </div>
+          <!-- its your 7th week <br>      on the journey <br>      of 33 weeks  -->
           <br />
           {% for i in user_data %}
           <div style="display: flex; gap: 10px">
-            <p>Asha worker:</p>
+            <p>ASHA Worker Contact:</p> 
             <p>{{i.name}}:</p>
             <p>{{i.phone}}</p>
           </div>
@@ -33,7 +34,7 @@
     <div class="weekTopButtonDiv">
       <a href="#weektrans">
         <button class="weekTopButton">
-          <strong> Update your weekly info. </strong>
+          <strong> Update your Monthly info. </strong>
           <img
             style="padding-left: 15px"
             src="../static/images/weekDownArrow.svg"
@@ -46,128 +47,36 @@
   <div id="weektrans" class="trans">
     <h2 style="display: flex; justify-content: center">Month wise Updates</h2>
 
-    {% comment %}
-    <ul class="weeks">
-      <li>
-        <a href="{% url 'start' %}">
-          <label for="one" class="weekbutton"> Start </label>
-          <input class="radiobutton" type="radio" name="weekno" value="One" />
-        </a>
-      </li>
-      <li>
-        <a href="{% url 'month1' %}">
-          <label for="two" class="weekbutton">Month 1</label>
-          <input class="radiobutton" type="radio" name="weekno" value="Two" />
-        </a>
-      </li>
-      <li>
-        <a href="{% url 'month2' %}">
-          <label for="three" class="weekbutton">Month 2</label>
-          <input class="radiobutton" type="radio" name="weekno" value="Three" />
-        </a>
-      </li>
-      <li>
-        <label for="four" class="weekbutton">Month 3</label>
-        <input
-          class="radiobutton"
-          id="four"
-          type="radio"
-          name="weekno"
-          value="Four"
-        />
-      </li>
-      <li>
-        <label for="five" class="weekbutton">Month 4</label>
-        <input
-          class="radiobutton"
-          id="five"
-          type="radio"
-          name="weekno"
-          value="Five"
-        />
-      </li>
-      <li>
-        <label for="six" class="weekbutton">Month 5</label>
-        <input
-          class="radiobutton"
-          id="six"
-          type="radio"
-          name="weekno"
-          value="Six"
-        />
-      </li>
-      <li>
-        <label for="seven" class="weekbutton">Month 6</label>
-        <input
-          class="radiobutton"
-          id="seven"
-          type="radio"
-          name="weekno"
-          value="Seven"
-        />
-      </li>
-      <li>
-        <label for="eight" class="weekbutton">Month 7</label>
-        <input
-          class="radiobutton"
-          id="eight"
-          type="radio"
-          name="weekno"
-          value="Eight"
-        />
-      </li>
-      <li>
-        <label for="nine" class="weekbutton">Month 8</label>
-        <input
-          class="radiobutton"
-          id="nine"
-          type="radio"
-          name="weekno"
-          value="Nine"
-        />
-      </li>
-      <li>
-        <label for="ten" class="weekbutton">Month 9</label>
-        <input
-          class="radiobutton"
-          id="ten"
-          type="radio"
-          name="weekno"
-          value="Ten"
-        />
-      </li>
-    </ul>
-    {% endcomment %}
     <div class="monthdata-wrapper">
       <div class="monthdata">
-        <a href="{% url 'start' %}"> start </a>
+        <a href="{% url 'start' %}"> Start </a>
       </div>
       <div>
-        <a href="{% url 'month1' %}"> month1 </a>
+        <a href="{% url 'month1' %}"> Month 1 </a>
       </div>
       <div>
-        <a href="{% url 'month2' %}"> month2 </a>
+        <a href="{% url 'month2' %}"> Month 2 </a>
       </div>
       <div>
-        <a href="{% url 'month3' %}"> month3 </a>
+        <a href="{% url 'month3' %}"> Month 3 </a>
       </div>
       <div>
-        <a href="{% url 'month4' %}"> month4 </a>
+        <a href="{% url 'month4' %}"> Month 4 </a>
       </div>
       <div>
-        <a href="{% url 'month5' %}"> month5 </a>
+        <a href="{% url 'month5' %}"> Month 5 </a>
       </div>
       <div>
-        <a href="{% url 'month6' %}"> month6 </a>
+        <a href="{% url 'month6' %}"> Month 6 </a>
       </div>
       <div>
-        <a href="{% url 'month7' %}"> month7 </a>
+        <a href="{% url 'month7' %}"> Month 7 </a>
       </div>
       <div>
-        <a href="{% url 'month8' %}"> month8 </a>
+        <a href="{% url 'month8' %}"> Month 8 </a>
       </div>
       <div>
-        <a href="{% url 'month9' %}"> month9 </a>
+        <a href="{% url 'month9' %}"> Month 9 </a>
       </div>
     </div>
 
@@ -178,7 +87,7 @@
 
   <div
     class="text"
-    style="display: flex; flex-direction: row; gap: 100px; font-size: medium"
+    style="display: flex;justify-content: center;align-items: center; flex-direction: row; gap: 100px; font-size: medium; "
   >
     <div
       style="
@@ -225,6 +134,7 @@
         </p>
       </div>
     </div>
+
   </div>
 </div>
 {% endblock %} {% block script %}

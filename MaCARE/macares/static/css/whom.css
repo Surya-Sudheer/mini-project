@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  width: 100vw;
 }
 .womenhomepg {
   height: 100vh;
@@ -142,7 +141,7 @@ button:active {
 }
 
 .trans {
-  padding-top: 20px;
+  padding-top: 10px;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -175,17 +174,6 @@ button:active {
   display: flex;
   justify-content: center;
 }
-/* #showOne{
-
-}
-
-#showTwo{
-
-}
-
-#showThree{
-
-} */
 
 .monthdata-wrapper {
   display: flex;
