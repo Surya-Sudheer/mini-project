@@ -17,7 +17,7 @@ class User(models.Model):
     lastmen = models.DateField(settings.DATE_FORMAT,default="2002-02-01")
     lastpg = models.DateField(settings.DATE_FORMAT,default="2002-02-01")
     bg = models.CharField(max_length=20,default="A+")
-
+    rchid=models.IntegerField(default='0')
 
     def __str__(self):
         return self.email

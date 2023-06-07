@@ -20,17 +20,19 @@ def womenSignUp(request):
         phone = request.POST.get('phone')
         age = request.POST.get('age')
         cmp = request.POST.get('cmp')
-
+        rchid=request.POST.get('rchid')
+        bg=request.POST.get('bg')
         if (password == re_password):
             print(occupation)
             user = User(name=name, email=email, password=password, occupation=occupation,
-                        age=age, cmp=cmp, phone=phone, wardno=wardno, district=district)
+                        age=age, cmp=cmp, phone=phone, wardno=wardno, district=district,rchid=rchid,bg=bg)
             user.save()
+            print(email)
             email = [email]
             request.session['uname'] = name
             request.session['email'] = email
             request.session['occupation'] = occupation
-            return whome(request)
+            return ashalogin(request)
     else:
         return render(request, 'womenSignUp.html')
 
@@ -136,7 +138,7 @@ def wprofile(request):
             'district': users.district,
             'phone': users.phone,
             'panchayath': users.cmp,
-            'rchid': users.uid
+            'rchid': users.rchid
         }
         return render(request, 'wprofile.html', {'my_dict': my_dict})
     else:
@@ -178,10 +180,10 @@ def wupdate(request):
             'district': users.district,
             'phone': users.phone,
             'panchayath': users.cmp,
-            'rchid': users.uid,
+            # 'rchid': users.uid,
             'lastmen': users.lastmen,
             'lastpg': users.lastpg,
-            'bg': users.bg
+            # 'bg': users.bg
         }
         if request.method == 'POST':
             users = User.objects.get(email=request.session['email'])
@@ -193,11 +195,11 @@ def wupdate(request):
             phone = request.POST.get('newphone')
             lastmen = request.POST.get('newlastmen')
             lastpg = request.POST.get('newlastpg')
-            bg = request.POST.get('newbg')
+            # bg = request.POST.get('newbg')
             # rchid = request.POST.get('newrchid')
 
             print(name, district, panchayath,
-                  wardno, phone, lastmen, lastpg, bg)
+                  wardno, phone, lastmen, lastpg)
             users.name = name
             users.district = district
             users.cmp = panchayath
@@ -210,7 +212,7 @@ def wupdate(request):
 
             # users.lastmen=lastmen
             # users.lastpg=lastpg
-            users.bg = bg
+            # users.bg = bg
             users.save()
             return redirect('wprofile')
 
@@ -235,7 +237,7 @@ def ashaWomenInWard(request):
                                   'district': i.district,
                                   'phone': i.phone,
                                   'panchayath': i.cmp,
-                                  'rchid': i.uid,
+                                  'rchid': i.rchid,
                                   'lastmen': i.lastmen,
                                   'lastpg': i.lastpg,
                                   'bg': i.bg})
@@ -276,7 +278,7 @@ def ashaupdate(request):
             'district': users.district,
             'phone': users.phone,
             'panchayath': users.cmp,
-            'rchid': users.uid,
+            'rchid': users.rchid,
             'lastmen': users.lastmen,
             'lastpg': users.lastpg,
             'bg': users.bg

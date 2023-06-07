@@ -28,8 +28,7 @@
                             value="{{my_dict.panchayath}}">
                         <p>Ward Number</p>
                         <input type="text" placeholder="   Ward Number" name="newwardno" value="{{my_dict.wardno}}">
-                        <p>Contact</p>
-                        <input type="number" placeholder="   Contact" name="newphone" value="{{my_dict.phone}}">
+                        
                     </div>
 
                     <div>
@@ -38,10 +37,12 @@
                             value="{{my_dict.lastmen}}">
                         <p>Last Pregnancy Date : {{my_dict.lastpg}}</p>
                         <input type="date" placeholder="   Date" name="newlastpg" value="{{my_dict.lastpg}}">
-                        <p>Blood Group</p>
+                        <p>Contact</p>
+                        <input type="number" placeholder="   Contact" name="newphone" value="{{my_dict.phone}}">
+                        {% comment %} <p>Blood Group</p>
                         <input type="text" placeholder="   Blood Group" name="newbg" value="{{my_dict.bg}}">
                         <p>RCH id</p>
-                        <input type="text" placeholder="   12 digit id "  value="{{my_dict.rchid}}">
+                        <input type="text" placeholder="   12 digit id "  value="{{my_dict.rchid}}"> {% endcomment %}
 
                     </div>
                 </div>
