@@ -5,7 +5,8 @@
 {% block content %}
 
 
-<form action="{% url 'wupdate' %}" method="post">
+<form action="{% url 'ashaupdate' %}" method="post">
+    {% csrf_token %}
     <div class="wupdates-wrapper">
         <div style="display: flex; align-items: center; justify-content: center; ">
 
@@ -15,26 +16,26 @@
                 </div>
                 <div>
                     <p>Name</p>
-                    <input style="width: 100%" type="text" placeholder="   ">
+                    <input style="width: 100%" type="text" placeholder="   " value="{{my_dict.name}}" name="new_name">
                 </div>
 
                 <div class="new">
                     <div>
                         <p>District</p>
-                        <input type="email" placeholder="   District">
+                        <input type="text" placeholder="   District" name="newdistric" value="{{my_dict.district}}">
                         <p>Panchayath</p>
-                        <input type="text" placeholder="   Panchayath">
-                        <p>Ward Number</p>
-                        <input type="text" placeholder="   Ward Number">
-                       
+                        <input type="text" placeholder="   Panchayath" name="newpanchayath"
+                            value="{{my_dict.panchayath}}">
+                        
                     </div>
 
                     <div>
+                        
+                        <p>Ward Number</p>
+                        <input type="text" placeholder="   Ward Number" name="newwardno" value="{{my_dict.wardno}}">
+                            
                         <p>Contact</p>
-                        <input type="number" placeholder="   Contact">
-                        <p> id</p>
-                        <input type="number" placeholder="   id number ">
-
+                        <input type="number" placeholder="   Contact" name="newphone" value="{{my_dict.phone}}">
                     </div>
                 </div>
 

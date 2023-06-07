@@ -1,5 +1,86 @@
 {% extends 'baseAsha.html' %} {% block style %}
 <link rel="stylesheet" href="../static/css/ashaprofile.css" />
+<style>
+  .profileasha-wrapper {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0px;
+  }
+  .labelprofile {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .labelprofile > :nth-child(2) {
+    min-width: 150px;
+    max-width: 200px;
+    height: 20px;
+    padding: 5px 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  input {
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: 0;
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+  }
+  .contentWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(20, 16, 16, 0.1);
+    background-color: rgb(212, 217, 217);
+    padding: 20px;
+  }
+  .new {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap:20px;
+  }
+  .new > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+  }
+  .up {
+    padding: 8px;
+    background-color: rgb(122, 193, 255);
+    border-radius: 5px;
+    border: none;
+  }
+  .can {
+    padding: 8px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: none;
+  }
+  .img-circle img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+  }
+</style>
+
 {% endblock %} {% block content %}
 
 <div class="profileasha-wrapper">

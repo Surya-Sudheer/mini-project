@@ -193,10 +193,69 @@ def ashaWomenInWard(request):
     
 
 def ashaprofile(request):
-    return render(request,'ashaprofile.html')
-
+    if 'email' in request.session:
+        users  = User.objects.get(email=request.session['email'])
+        my_dict = {
+            'name': users.name,
+            'email':users.email,
+            'wardno' : users.wardno,
+            'district': users.district,
+            'phone':users.phone,
+            'panchayath':users.cmp,
+            'rchid'   : users.uid  
+        }
+        return render(request,'ashaprofile.html',{'my_dict':my_dict})
+    else:
+        data = {'status':'You need to login first'}
+        return render(request,'ashalogin.html',context=data)
+    
 def ashaupdate(request):
-    return render(request,'ashaupdate.html')
+    if 'email' in request.session:
+        users  = User.objects.get(email=request.session['email'])
+        my_dict = {
+            'name': users.name,
+            'email':users.email,
+            'wardno' : users.wardno,
+            'district': users.district,
+            'phone':users.phone,
+            'panchayath':users.cmp,
+            'rchid'   : users.uid ,
+            'lastmen' : users.lastmen,
+            'lastpg':users.lastpg,
+            'bg':users.bg
+            }
+        if request.method == 'POST':
+            users  = User.objects.get(email=request.session['email'])
+            print(users.email)
+            name = request.POST.get('new_name')
+            district = request.POST.get('newdistric')
+            panchayath = request.POST.get('newpanchayath')
+            wardno = request.POST.get('newwardno')
+            phone = request.POST.get('newphone')
+            lastmen = request.POST.get('newlastmen')
+            lastpg = request.POST.get('newlastpg')
+            bg = request.POST.get('newbg')
+            # rchid = request.POST.get('newrchid')
+         
+            print(name,district,panchayath,wardno,phone,lastmen,lastpg,bg)
+            users.name=name
+            users.district=district
+            users.cmp=panchayath
+            users.wardno=wardno
+            users.phone=phone
+             
+            # users.lastmen=lastmen
+            # users.lastpg=lastpg
+            
+            users.save()
+            return redirect('ashaprofile')
+
+        user = User.objects.get(email=request.session['email'])
+        return render(request,'ashaupdate.html',{'my_dict':my_dict})
+    else:
+        data = {'status':'You need to login first'}
+        return render(request,'ashalogin.html',context=data)
+
 
 def ashaGuidlinesView(request):
     return render(request,'ashaGuidlinesView.html')
