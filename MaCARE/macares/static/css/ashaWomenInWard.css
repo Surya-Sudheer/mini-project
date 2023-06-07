@@ -8,17 +8,10 @@ body{
     padding: 0 ;
     overflow-x: hidden;
     overflow-y: hidden;
-    margin-top: 50px;
 }
-.womenList{
-    /* height: 100vh; */
-    display: flex;
-    align-items:flex-start;
-    /* padding: 50px; */
-    margin-top: 80px;
-}
+
 .eachWomen{
-    background-color: rgb(240, 228, 215);
+    background-color: rgb(237, 222, 207);
     border-radius: 10px;
     padding: 20px 30px;
     display: flex;
