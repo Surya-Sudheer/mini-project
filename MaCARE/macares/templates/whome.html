@@ -1,198 +1,245 @@
-{% extends 'baseWomen.html' %}
-{% block style %}
+{% extends 'baseWomen.html' %} {% block style %}
 <link rel="stylesheet" href="../static/css/whom.css" />
-{% block monthstyle %}{% endblock %}
-{% endblock %}
-{% block content %}
-<div style="margin-top:100px">
-    <div class="womenhomepg">
-        <h1 style="padding-top:50px"> </h1>
+{% block monthstyle %}{% endblock %} {% endblock %} {% block content %}
+<div style="margin-top: 100px">
+  <div class="womenhomepg">
+    <h1 style="padding-top: 50px"></h1>
 
-        <div class="womencont">
-            <div style="display:flex;gap:30px">
-
-                <pre> <strong> Hey Meera,<br><br></strong>      its your 7th week <br>      on the journey <br>      of 33 weeks 
+    <div class="womencont">
+      <div style="display: flex; gap: 30px">
+        <div style="display: flex;  flex-direction: column">
+          <div>
+            <pre> <strong> Hey {{my_dict.name}},<br><br></strong>      its your 7th week <br>      on the journey <br>      of 33 weeks 
                         </pre>
-
-                <img src="../static/images/rocket.svg" style=" padding-top: 40px;" />
-
-            </div>
-
-            <img src="../static/images/Pregnancy stages-pana (2) 1.svg" style="width:600px;height:500px;padding:80px" />
-
+          </div>
+          <br />
+          {% for i in user_data %}
+          <div style="display: flex; gap: 10px">
+            <p>Asha worker</p>
+            <p>{{i.name}}</p>
+            <p>{{i.phone}}</p>
+          </div>
+          {% endfor %}
         </div>
+        <img src="../static/images/rocket.svg" style="padding-top: 40px" />
+      </div>
 
-        <div class="weekTopButtonDiv">
-            <a href="#weektrans">
-                <button class="weekTopButton"> <strong> Update your weekly info. </strong>
-                    <img style="padding-left: 15px;" src="../static/images/weekDownArrow.svg">
-                </button>
-            </a>
-        </div>
+      <img
+        src="../static/images/Pregnancy stages-pana (2) 1.svg"
+        style="width: 600px; height: 500px; padding: 80px"
+      />
     </div>
 
+    <div class="weekTopButtonDiv">
+      <a href="#weektrans">
+        <button class="weekTopButton">
+          <strong> Update your weekly info. </strong>
+          <img
+            style="padding-left: 15px"
+            src="../static/images/weekDownArrow.svg"
+          />
+        </button>
+      </a>
+    </div>
+  </div>
 
+  <div id="weektrans" class="trans">
+    <h2 style="display: flex; justify-content: center">Month wise Updates</h2>
 
-    <div id="weektrans" class="trans">
-        <h2 style="display: flex; justify-content: center; ">Month wise Updates</h2>
-
-        {% comment %} <ul class="weeks">
-            <li>
-                <a href="{% url 'start' %}">
-                    <label for="one" class="weekbutton"> Start </label>
-                    <input class="radiobutton" type="radio" name="weekno" value="One" />
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'month1' %}">
-                    <label for="two" class="weekbutton">Month 1</label>
-                    <input class="radiobutton" type="radio" name="weekno" value="Two" />
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'month2' %}">
-                    <label for="three" class="weekbutton">Month 2</label>
-                    <input class="radiobutton" type="radio" name="weekno" value="Three" />
-
-                </a>
-            </li>
-            <li>
-                <label for="four" class="weekbutton">Month 3</label>
-                <input class="radiobutton" id="four" type="radio" name="weekno" value="Four" />
-            </li>
-            <li>
-                <label for="five" class="weekbutton">Month 4</label>
-                <input class="radiobutton" id="five" type="radio" name="weekno" value="Five" />
-            </li>
-            <li>
-                <label for="six" class="weekbutton">Month 5</label>
-                <input class="radiobutton" id="six" type="radio" name="weekno" value="Six" />
-            </li>
-            <li>
-                <label for="seven" class="weekbutton">Month 6</label>
-                <input class="radiobutton" id="seven" type="radio" name="weekno" value="Seven" />
-            </li>
-            <li>
-                <label for="eight" class="weekbutton">Month 7</label>
-                <input class="radiobutton" id="eight" type="radio" name="weekno" value="Eight" />
-            </li>
-            <li>
-                <label for="nine" class="weekbutton">Month 8</label>
-                <input class="radiobutton" id="nine" type="radio" name="weekno" value="Nine" />
-            </li>
-            <li>
-                <label for="ten" class="weekbutton">Month 9</label>
-                <input class="radiobutton" id="ten" type="radio" name="weekno" value="Ten" />
-            </li>
-        </ul> {% endcomment %}
-        <div class="monthdata-wrapper">
-            <div class="monthdata">
-                <a href="{% url 'start' %}">
-                    start
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month1' %}">
-                    month1
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month2' %}">
-                    month2
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month3' %}">
-                    month3
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month4' %}">
-                    month4
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month5' %}">
-                    month5
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month6' %}">
-                    month6
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month7' %}">
-                    month7
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month8' %}">
-                    month8
-                </a>
-            </div>
-            <div>
-                <a href="{% url 'month9' %}">
-                    month9
-                </a>
-            </div>
-
-        </div>
-
-        <div style="background-color: white;">
-            {% block monthcontent %}{% endblock %}
-        </div>
+    {% comment %}
+    <ul class="weeks">
+      <li>
+        <a href="{% url 'start' %}">
+          <label for="one" class="weekbutton"> Start </label>
+          <input class="radiobutton" type="radio" name="weekno" value="One" />
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'month1' %}">
+          <label for="two" class="weekbutton">Month 1</label>
+          <input class="radiobutton" type="radio" name="weekno" value="Two" />
+        </a>
+      </li>
+      <li>
+        <a href="{% url 'month2' %}">
+          <label for="three" class="weekbutton">Month 2</label>
+          <input class="radiobutton" type="radio" name="weekno" value="Three" />
+        </a>
+      </li>
+      <li>
+        <label for="four" class="weekbutton">Month 3</label>
+        <input
+          class="radiobutton"
+          id="four"
+          type="radio"
+          name="weekno"
+          value="Four"
+        />
+      </li>
+      <li>
+        <label for="five" class="weekbutton">Month 4</label>
+        <input
+          class="radiobutton"
+          id="five"
+          type="radio"
+          name="weekno"
+          value="Five"
+        />
+      </li>
+      <li>
+        <label for="six" class="weekbutton">Month 5</label>
+        <input
+          class="radiobutton"
+          id="six"
+          type="radio"
+          name="weekno"
+          value="Six"
+        />
+      </li>
+      <li>
+        <label for="seven" class="weekbutton">Month 6</label>
+        <input
+          class="radiobutton"
+          id="seven"
+          type="radio"
+          name="weekno"
+          value="Seven"
+        />
+      </li>
+      <li>
+        <label for="eight" class="weekbutton">Month 7</label>
+        <input
+          class="radiobutton"
+          id="eight"
+          type="radio"
+          name="weekno"
+          value="Eight"
+        />
+      </li>
+      <li>
+        <label for="nine" class="weekbutton">Month 8</label>
+        <input
+          class="radiobutton"
+          id="nine"
+          type="radio"
+          name="weekno"
+          value="Nine"
+        />
+      </li>
+      <li>
+        <label for="ten" class="weekbutton">Month 9</label>
+        <input
+          class="radiobutton"
+          id="ten"
+          type="radio"
+          name="weekno"
+          value="Ten"
+        />
+      </li>
+    </ul>
+    {% endcomment %}
+    <div class="monthdata-wrapper">
+      <div class="monthdata">
+        <a href="{% url 'start' %}"> start </a>
+      </div>
+      <div>
+        <a href="{% url 'month1' %}"> month1 </a>
+      </div>
+      <div>
+        <a href="{% url 'month2' %}"> month2 </a>
+      </div>
+      <div>
+        <a href="{% url 'month3' %}"> month3 </a>
+      </div>
+      <div>
+        <a href="{% url 'month4' %}"> month4 </a>
+      </div>
+      <div>
+        <a href="{% url 'month5' %}"> month5 </a>
+      </div>
+      <div>
+        <a href="{% url 'month6' %}"> month6 </a>
+      </div>
+      <div>
+        <a href="{% url 'month7' %}"> month7 </a>
+      </div>
+      <div>
+        <a href="{% url 'month8' %}"> month8 </a>
+      </div>
+      <div>
+        <a href="{% url 'month9' %}"> month9 </a>
+      </div>
     </div>
 
-    <div class="text" style="display:flex; flex-direction:row; gap:100px; font-size: medium;">
-        <div style=" text-align:center; padding-top:100px; padding-left:100px; width:700px;">
-            <p>
-                Pregnancy is a time of immense change, growth, and wonder.
-                As a pregnant woman, you are embarking on an incredible journey that will transform your body, your
-                mind, and your heart in ways you may not yet imagine. You are creating a new life, a precious little
-                person who will bring you love, joy, and fulfillment beyond measure.
-            </p>
-            <br>
-            <p>
-                But pregnancy can also be a time of uncertainty, discomfort, and fear. It's okay to feel overwhelmed or
-                anxious at times, and it's important to take care of yourself physically, emotionally, and spiritually
-                during this time.
-            </p>
-            <br>
-            <p>
-                Remember to nourish your body with healthy foods and gentle exercise, to rest when you need to, and to
-                seek support from loved ones and healthcare providers whenever you need it.
-            </p>
-        </div>
+    <div style="background-color: white">
+      {% block monthcontent %}{% endblock %}
+    </div>
+  </div>
 
-        <div class="womencard">
-            <div><img src="../static/images/holdOutURhands.svg" style=" height:180px; width:180px; " /></div>
-            <div style="padding: 5px;">
-                <p>
-                    As you begin this journey of pregnancy, know that you are not alone. You have a community of support
-                    and love around you, and we are all here to help you.
-                </p>
-            </div>
-        </div>
+  <div
+    class="text"
+    style="display: flex; flex-direction: row; gap: 100px; font-size: medium"
+  >
+    <div
+      style="
+        text-align: center;
+        padding-top: 100px;
+        padding-left: 100px;
+        width: 700px;
+      "
+    >
+      <p>
+        Pregnancy is a time of immense change, growth, and wonder. As a pregnant
+        woman, you are embarking on an incredible journey that will transform
+        your body, your mind, and your heart in ways you may not yet imagine.
+        You are creating a new life, a precious little person who will bring you
+        love, joy, and fulfillment beyond measure.
+      </p>
+      <br />
+      <p>
+        But pregnancy can also be a time of uncertainty, discomfort, and fear.
+        It's okay to feel overwhelmed or anxious at times, and it's important to
+        take care of yourself physically, emotionally, and spiritually during
+        this time.
+      </p>
+      <br />
+      <p>
+        Remember to nourish your body with healthy foods and gentle exercise, to
+        rest when you need to, and to seek support from loved ones and
+        healthcare providers whenever you need it.
+      </p>
     </div>
 
-
-
+    <div class="womencard">
+      <div>
+        <img
+          src="../static/images/holdOutURhands.svg"
+          style="height: 180px; width: 180px"
+        />
+      </div>
+      <div style="padding: 5px">
+        <p>
+          As you begin this journey of pregnancy, know that you are not alone.
+          You have a community of support and love around you, and we are all
+          here to help you.
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
-{% endblock %}
-{% block script %}
+{% endblock %} {% block script %}
 <script>
-    $(document).ready(function () {
-        $('input[type="radio"]').click(function () {
-            var demovalue = $(this).val();
-            $("div.myDiv").hide();
-            $("#show" + demovalue).show();
-        });
+  $(document).ready(function () {
+    $('input[type="radio"]').click(function () {
+      var demovalue = $(this).val();
+      $("div.myDiv").hide();
+      $("#show" + demovalue).show();
     });
+  });
 
-    $('input[type="radio"]').on('change', function () {
-        $('input[type="radio"]').closest('li.current').removeClass('current');
-        $(this).closest('li').addClass('current');
-    });
+  $('input[type="radio"]').on("change", function () {
+    $('input[type="radio"]').closest("li.current").removeClass("current");
+    $(this).closest("li").addClass("current");
+  });
 </script>
 {% endblock %}
