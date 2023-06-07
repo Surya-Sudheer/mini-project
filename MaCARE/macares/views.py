@@ -36,6 +36,8 @@ def womenSignUp(request):
 
 
 def whome(request):
+    user = User.objects.all()
+    user_data = []
     if 'email' in request.session:
         users = User.objects.get(email=request.session['email'])
         my_dict = {
@@ -47,11 +49,23 @@ def whome(request):
             'panchayath': users.cmp,
             'rchid': users.uid
         }
-        return render(request, 'whome.html', {'my_dict': my_dict})
+        for i in user:
+            if i.occupation == "ahaworker" and i.wardno == users.wardno:
+                user_data.append({'name': i.name,
+                                  'email': i.email,
+                                  'wardno': i.wardno,
+                                  'district': i.district,
+                                  'phone': i.phone,
+                                  'panchayath': i.cmp,
+
+                                  })
+        print(user_data)
+        print("hello hii")
+        print(user)
+        return render(request, 'whome.html', {'my_dict': my_dict, 'user_data': user_data})
     else:
         data = {'status': 'You need to login first'}
         return render(request, 'womenSignUp.html', context=data)
-
 
 
 def ashaSignUp(request):
@@ -130,8 +144,8 @@ def wprofile(request):
         return render(request, 'womenSignUp.html', context=data)
 
 
-def reverse(s):
-    date_str = s
+def reverse(p):
+    date_str = p
     original_format = "%Y-%m-%d"
     desired_format = "%Y-%m-%d"
     original_date = datetime.strptime(date_str, original_format)
@@ -143,15 +157,15 @@ def reverse(s):
 
 
 def reversed(s):
-    date_str = s
-    original_format = "%Y-%m-%d"
-    desired_format = "%Y-%m-%d"
-    original_date = datetime.strptime(date_str, original_format)
+    date_strs = s
+    original_formats = "%Y-%m-%d"
+    desired_formats = "%Y-%m-%d"
+    original_date = datetime.strptime(date_strs, original_formats)
 
-    desired_date_str = original_date.strftime(desired_format)
+    desired_date_strs = original_date.strftime(desired_formats)
 
-    print(desired_date_str)
-    return desired_date_str
+    print(desired_date_strs)
+    return desired_date_strs
 
 
 def wupdate(request):
@@ -190,7 +204,10 @@ def wupdate(request):
             users.wardno = wardno
             users.phone = phone
             users.lastmen = reverse(lastmen)
+            print(users.lastmen, "users.lastmen ")
             users.lastpg = reversed(lastpg)
+            print(users.lastpg, "users.lastpg ")
+
             # users.lastmen=lastmen
             # users.lastpg=lastpg
             users.bg = bg
@@ -224,7 +241,7 @@ def ashaWomenInWard(request):
                                   'bg': i.bg})
         print(user_data)
         print("hello hii")
-        
+
         return render(request, 'ashaWomenInWard.html', {'user_data': user_data})
     else:
         data = {'status': 'You need to login first'}

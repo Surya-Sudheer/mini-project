@@ -7,9 +7,20 @@
 
     <div class="womencont">
       <div style="display: flex; gap: 30px">
-        <pre> <strong> Hey {{my_dict.name}},<br><br></strong>      its your 7th week <br>      on the journey <br>      of 33 weeks 
+        <div style="display: flex;  flex-direction: column">
+          <div>
+            <pre> <strong> Hey {{my_dict.name}},<br><br></strong>      its your 7th week <br>      on the journey <br>      of 33 weeks 
                         </pre>
-
+          </div>
+          <br />
+          {% for i in user_data %}
+          <div style="display: flex; gap: 10px">
+            <p>Asha worker</p>
+            <p>{{i.name}}</p>
+            <p>{{i.phone}}</p>
+          </div>
+          {% endfor %}
+        </div>
         <img src="../static/images/rocket.svg" style="padding-top: 40px" />
       </div>
 
